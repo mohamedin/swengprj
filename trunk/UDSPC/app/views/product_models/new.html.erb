@@ -1,0 +1,71 @@
+<h1>New product_model</h1>
+
+<% form_for(@product_model) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :Serial %><br />
+    <%= f.text_field :Serial %>
+  </p>
+  <p>
+    <%= f.label :Name %><br />
+    <%= f.text_field :Name %>
+  </p>
+  <p>
+    <%= f.label :Price %><br />
+    <%= f.text_field :Price %>
+  </p>
+  <p>
+    <%= f.label :Discount %><br />
+    <%= f.text_field :Discount %>
+  </p>
+  <p>
+    <%= f.label :IsSpecialOffer %><br />
+    <%= f.check_box :IsSpecialOffer %>
+  </p>
+  <p>
+    <%= f.label :Rate %><br />
+    <%= f.text_field :Rate %>
+  </p>
+  <p>
+    <%= f.label :Description %><br />
+    <%= f.text_area :Description %>
+  </p>
+  <p>
+    <%= f.label :Features %><br />
+    <%= f.text_area :Features %>
+  </p>
+  <p>
+    <%= f.label :ImageURL %><br />
+    <%= f.text_field :ImageURL %>
+  </p>
+  <p>
+    <%= f.label :QuantityOnHand %><br />
+    <%= f.text_field :QuantityOnHand %>
+  </p>
+  <p>
+    <%= f.label :ReorderPoint %><br />
+    <%= f.text_field :ReorderPoint %>
+  </p>
+  <p>
+    <%= f.label :Size %><br />
+    <%= f.text_field :Size %>
+  </p>
+  <p>
+    <%= f.label :SalesPackageContent %><br />
+    <%= f.text_area :SalesPackageContent %>
+  </p>
+  <p>
+    <%= f.label :RelatedDocumentURL %><br />
+    <%= f.text_field :RelatedDocumentURL %>
+  </p>
+  <p>
+    <%= f.label :Product_id %><br />
+    <%= f.text_field :Product_id %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', product_models_path %>

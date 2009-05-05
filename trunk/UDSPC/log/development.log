@@ -1,0 +1,316 @@
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-28 23:31:40) [GET]
+
+ActionController::RoutingError (No route matches "/category" with {:method=>:get}):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-28 23:31:48) [GET]
+
+ActionController::RoutingError (No route matches "/Category" with {:method=>:get}):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-28 23:32:01) [GET]
+
+ActionController::RoutingError (No route matches "/Category/" with {:method=>:get}):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-28 23:33:57) [GET]
+
+ActionController::RoutingError (No route matches "/categorys" with {:method=>:get}):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-04-28 23:34:02) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: categories: SELECT * FROM "categories" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: categories: SELECT * FROM "categories" ):
+  app/controllers/categories_controller.rb:5:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (66.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20090428201410)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Code" varchar(255), "Name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090428201410')[0m
+Migrating to CreateProducts (20090428201649)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Code" varchar(255), "Name" varchar(255), "Description" text, "ImageURL" varchar(255), "KeyWords" varchar(255), "Category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090428201649')[0m
+Migrating to CreateProductModels (20090428202057)
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE TABLE "product_models" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Serial" integer, "Name" varchar(255), "Price" integer, "Discount" float, "IsSpecialOffer" boolean, "Rate" integer, "Description" text, "Features" text, "ImageURL" varchar(255), "QuantityOnHand" integer, "ReorderPoint" integer, "Size" varchar(255), "SalesPackageContent" text, "RelatedDocumentURL" varchar(255), "Product_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090428202057')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("categories")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("product_models")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("products")[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-04-28 23:35:14) [GET]
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 2840ms (View: 2776, DB: 1) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2009-04-28 23:35:19) [GET]
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 26ms (View: 14, DB: 0) | 200 OK [http://localhost/categories/new]
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2009-04-28 23:35:28) [POST]
+  Parameters: {"category"=>{"Name"=>"Food", "Code"=>"1"}, "commit"=>"Create", "authenticity_token"=>"MSyfzplxbIlu9axQ9T1UvSepDHk23WqChI8DcXsN1d4="}
+  [4;35;1mCategory Create (2.0ms)[0m   [0mINSERT INTO "categories" ("Name", "updated_at", "Code", "created_at") VALUES('Food', '2009-04-28 20:35:28', '1', '2009-04-28 20:35:28')[0m
+Redirected to http://localhost:3000/categories/1
+Completed in 124ms (DB: 2) | 302 Found [http://localhost/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-04-28 23:35:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 23ms (View: 11, DB: 0) | 200 OK [http://localhost/categories/1]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-04-28 23:35:35) [GET]
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 19ms (View: 7, DB: 1) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2009-04-28 23:35:37) [GET]
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 21ms (View: 7, DB: 0) | 200 OK [http://localhost/categories/new]
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2009-04-28 23:35:42) [POST]
+  Parameters: {"category"=>{"Name"=>"Cloth", "Code"=>"2"}, "commit"=>"Create", "authenticity_token"=>"MSyfzplxbIlu9axQ9T1UvSepDHk23WqChI8DcXsN1d4="}
+  [4;36;1mCategory Create (2.0ms)[0m   [0;1mINSERT INTO "categories" ("Name", "updated_at", "Code", "created_at") VALUES('Cloth', '2009-04-28 20:35:42', '2', '2009-04-28 20:35:42')[0m
+Redirected to http://localhost:3000/categories/2
+Completed in 23ms (DB: 2) | 302 Found [http://localhost/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-04-28 23:35:42) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 16ms (View: 4, DB: 0) | 200 OK [http://localhost/categories/2]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-04-28 23:35:50) [GET]
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 23ms (View: 9, DB: 1) | 200 OK [http://localhost/categories]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2009-04-28 23:36:15) [GET]
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 110ms (View: 33, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2009-04-28 23:36:51) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2009-04-28 23:37:34) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"MSyfzplxbIlu9axQ9T1UvSepDHk23WqChI8DcXsN1d4=", "product"=>{"Name"=>"Rice", "ImageURL"=>"", "Code"=>"11", "Category_id"=>"1", "KeyWords"=>"rice", "Description"=>"Nice Rice!"}}
+  [4;36;1mProduct Create (2.0ms)[0m   [0;1mINSERT INTO "products" ("Name", "updated_at", "Code", "ImageURL", "Category_id", "Description", "KeyWords", "created_at") VALUES('Rice', '2009-04-28 20:37:34', '11', '', 1, 'Nice Rice!', 'rice', '2009-04-28 20:37:34')[0m
+Redirected to http://localhost:3000/products/1
+Completed in 29ms (DB: 2) | 302 Found [http://localhost/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2009-04-28 23:37:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 26ms (View: 13, DB: 0) | 200 OK [http://localhost/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2009-04-28 23:37:37) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/products]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-04-29 20:07:27) [GET]
+  [4;36;1mCategory Load (16.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 2776ms (View: 2667, DB: 16) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2009-04-29 20:07:46) [GET]
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/categories/new]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-04-29 20:07:49) [GET]
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 12ms (View: 9, DB: 1) | 200 OK [http://localhost/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2009-04-29 20:07:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 61ms (View: 9, DB: 0) | 200 OK [http://localhost/categories/1]
+
+
+Processing CategoriesController#edit (for 127.0.0.1 at 2009-04-29 20:07:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendering template within layouts/categories
+Rendering categories/edit
+Completed in 24ms (View: 12, DB: 0) | 200 OK [http://localhost/categories/1/edit]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-04-29 20:08:00) [GET]
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/categories]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2009-04-29 20:08:10) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 125ms (View: 63, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2009-04-29 20:08:17) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 71ms (View: 59, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2009-04-29 20:08:35) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/products]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2009-04-29 20:08:36) [GET]
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 112ms (View: 101, DB: 1) | 200 OK [http://localhost/categories]
+
+
+Processing ProductModelsController#index (for 127.0.0.1 at 2009-04-29 20:08:48) [GET]
+  [4;36;1mProductModel Load (0.0ms)[0m   [0;1mSELECT * FROM "product_models" [0m
+Rendering template within layouts/product_models
+Rendering product_models/index
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://localhost/product_models]
+
+
+Processing ProductModelsController#new (for 127.0.0.1 at 2009-04-29 20:08:53) [GET]
+Rendering template within layouts/product_models
+Rendering product_models/new
+Completed in 106ms (View: 93, DB: 0) | 200 OK [http://localhost/product_models/new]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2009-05-05 19:59:23) [GET]
+  [4;36;1mProduct Load (28.0ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 7901ms (View: 7572, DB: 28) | 200 OK [http://127.0.0.1/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2009-05-05 20:00:15) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Completed in 182ms (View: 155, DB: 0) | 200 OK [http://127.0.0.1/products/new]

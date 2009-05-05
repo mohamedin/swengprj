@@ -1,0 +1,35 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  Serial: 1
+  Name: MyString
+  Price: 1
+  Discount: 1.5
+  IsSpecialOffer: false
+  Rate: 1
+  Description: MyText
+  Features: MyText
+  ImageURL: MyString
+  QuantityOnHand: 1
+  ReorderPoint: 1
+  Size: MyString
+  SalesPackageContent: MyText
+  RelatedDocumentURL: MyString
+  Product_id: 1
+
+two:
+  Serial: 1
+  Name: MyString
+  Price: 1
+  Discount: 1.5
+  IsSpecialOffer: false
+  Rate: 1
+  Description: MyText
+  Features: MyText
+  ImageURL: MyString
+  QuantityOnHand: 1
+  ReorderPoint: 1
+  Size: MyString
+  SalesPackageContent: MyText
+  RelatedDocumentURL: MyString
+  Product_id: 1
