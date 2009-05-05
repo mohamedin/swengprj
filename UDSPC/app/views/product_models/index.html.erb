@@ -1,0 +1,48 @@
+<h1>Listing product_models</h1>
+
+<table>
+  <tr>
+    <th>Serial</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Discount</th>
+    <th>Isspecialoffer</th>
+    <th>Rate</th>
+    <th>Description</th>
+    <th>Features</th>
+    <th>Imageurl</th>
+    <th>Quantityonhand</th>
+    <th>Reorderpoint</th>
+    <th>Size</th>
+    <th>Salespackagecontent</th>
+    <th>Relateddocumenturl</th>
+    <th>Product</th>
+  </tr>
+
+<% @product_models.each do |product_model| %>
+  <tr>
+    <td><%=h product_model.Serial %></td>
+    <td><%=h product_model.Name %></td>
+    <td><%=h product_model.Price %></td>
+    <td><%=h product_model.Discount %></td>
+    <td><%=h product_model.IsSpecialOffer %></td>
+    <td><%=h product_model.Rate %></td>
+    <td><%=h product_model.Description %></td>
+    <td><%=h product_model.Features %></td>
+    <td><%=h product_model.ImageURL %></td>
+    <td><%=h product_model.QuantityOnHand %></td>
+    <td><%=h product_model.ReorderPoint %></td>
+    <td><%=h product_model.Size %></td>
+    <td><%=h product_model.SalesPackageContent %></td>
+    <td><%=h product_model.RelatedDocumentURL %></td>
+    <td><%=h product_model.Product_id %></td>
+    <td><%= link_to 'Show', product_model %></td>
+    <td><%= link_to 'Edit', edit_product_model_path(product_model) %></td>
+    <td><%= link_to 'Destroy', product_model, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New product_model', new_product_model_path %>

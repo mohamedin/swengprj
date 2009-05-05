@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  Code: MyString
+  Name: MyString
+
+two:
+  Code: MyString
+  Name: MyString
