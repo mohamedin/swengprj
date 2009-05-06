@@ -1,8 +1,13 @@
-<h1>Editing product_model</h1>
+<h1>Editing Product Model</h1>
 
 <% form_for(@product_model) do |f| %>
   <%= f.error_messages %>
 
+  <p>
+    <%= f.label :product_id %><br />
+    <%= f.select :product_id , Product.find(:all , :order => "Name").collect { |c|
+		[c.Name , c.id]}%>
+  </p>	
   <p>
     <%= f.label :Serial %><br />
     <%= f.text_field :Serial %>
@@ -58,10 +63,6 @@
   <p>
     <%= f.label :RelatedDocumentURL %><br />
     <%= f.text_field :RelatedDocumentURL %>
-  </p>
-  <p>
-    <%= f.label :Product_id %><br />
-    <%= f.text_field :Product_id %>
   </p>
   <p>
     <%= f.submit 'Update' %>

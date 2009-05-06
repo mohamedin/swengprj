@@ -4,6 +4,11 @@
   <%= f.error_messages %>
 
   <p>
+    <%= f.label :category_id %><br />
+    <%= f.select :category_id , Category.find(:all , :order => "Name").collect { |c|
+		[c.Name , c.id]}%>
+  </p>
+  <p>
     <%= f.label :Code %><br />
     <%= f.text_field :Code %>
   </p>
@@ -23,10 +28,7 @@
     <%= f.label :KeyWords %><br />
     <%= f.text_field :KeyWords %>
   </p>
-  <p>
-    <%= f.label :Category_id %><br />
-    <%= f.text_field :Category_id %>
-  </p>
+
   <p>
     <%= f.submit 'Create' %>
   </p>

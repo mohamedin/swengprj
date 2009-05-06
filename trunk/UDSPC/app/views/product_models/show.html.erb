@@ -1,4 +1,9 @@
 <p>
+  <b>Product:</b>
+  <%=h @product_model.product.Name %>
+</p>
+
+<p>
   <b>Serial:</b>
   <%=h @product_model.Serial %>
 </p>
@@ -67,12 +72,6 @@
   <b>Relateddocumenturl:</b>
   <%=h @product_model.RelatedDocumentURL %>
 </p>
-
-<p>
-  <b>Product:</b>
-  <%=h @product_model.Product_id %>
-</p>
-
 
 <%= link_to 'Edit', edit_product_model_path(@product_model) %> |
 <%= link_to 'Back', product_models_path %>
