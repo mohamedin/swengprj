@@ -1,4 +1,4 @@
-<h1>Listing product_models</h1>
+<h1>Listing Product Models</h1>
 
 <table>
   <tr>
@@ -35,7 +35,7 @@
     <td><%=h product_model.Size %></td>
     <td><%=h product_model.SalesPackageContent %></td>
     <td><%=h product_model.RelatedDocumentURL %></td>
-    <td><%=h product_model.Product_id %></td>
+    <td><%=h product_model.product.Name %></td>
     <td><%= link_to 'Show', product_model %></td>
     <td><%= link_to 'Edit', edit_product_model_path(product_model) %></td>
     <td><%= link_to 'Destroy', product_model, :confirm => 'Are you sure?', :method => :delete %></td>
