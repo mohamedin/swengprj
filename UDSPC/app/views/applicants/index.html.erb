@@ -1,0 +1,52 @@
+<h1>Listing applicants</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Telephonenumber</th>
+    <th>Email</th>
+    <th>Loginname</th>
+    <th>Password</th>
+    <th>Billingaddress</th>
+    <th>Shippingaddress</th>
+    <th>Creditnumber</th>
+    <th>Secuirtynumber</th>
+    <th>Desieredposition</th>
+    <th>Currentposition</th>
+    <th>Education</th>
+    <th>Experience</th>
+    <th>Notes</th>
+    <th>Dateofbirth</th>
+    <th>Gender</th>
+  </tr>
+
+<% @applicants.each do |applicant| %>
+  <tr>
+    <td><%=h applicant.Name %></td>
+    <td><%=h applicant.Address %></td>
+    <td><%=h applicant.TelephoneNumber %></td>
+    <td><%=h applicant.EMail %></td>
+    <td><%=h applicant.LoginName %></td>
+    <td><%=h applicant.Password %></td>
+    <td><%=h applicant.BillingAddress %></td>
+    <td><%=h applicant.ShippingAddress %></td>
+    <td><%=h applicant.CreditNumber %></td>
+    <td><%=h applicant.SecuirtyNumber %></td>
+    <td><%=h applicant.DesieredPosition %></td>
+    <td><%=h applicant.CurrentPosition %></td>
+    <td><%=h applicant.Education %></td>
+    <td><%=h applicant.Experience %></td>
+    <td><%=h applicant.Notes %></td>
+    <td><%=h applicant.DateOfBirth %></td>
+    <td><%=h applicant.Gender %></td>
+    <td><%= link_to 'Show', applicant %></td>
+    <td><%= link_to 'Edit', edit_applicant_path(applicant) %></td>
+    <td><%= link_to 'Destroy', applicant, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New applicant', new_applicant_path %>

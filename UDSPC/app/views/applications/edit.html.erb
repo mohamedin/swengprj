@@ -1,0 +1,24 @@
+<h1>Editing application</h1>
+
+<% form_for(@application) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :applicant_id %><br />
+    <%= f.text_field :applicant_id %>
+  </p>
+  <p>
+    <%= f.label :job_oppertunity_id %><br />
+    <%= f.text_field :job_oppertunity_id %>
+  </p>
+  <p>
+    <%= f.label :SendingDate %><br />
+    <%= f.datetime_select :SendingDate %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @application %> |
+<%= link_to 'Back', applications_path %>

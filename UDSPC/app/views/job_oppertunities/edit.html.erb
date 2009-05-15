@@ -1,0 +1,32 @@
+<h1>Editing job_oppertunity</h1>
+
+<% form_for(@job_oppertunity) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :JobTitle %><br />
+    <%= f.text_field :JobTitle %>
+  </p>
+  <p>
+    <%= f.label :Salary %><br />
+    <%= f.text_field :Salary %>
+  </p>
+  <p>
+    <%= f.label :Department %><br />
+    <%= f.text_field :Department %>
+  </p>
+  <p>
+    <%= f.label :Description %><br />
+    <%= f.text_area :Description %>
+  </p>
+  <p>
+    <%= f.label :Prequisites %><br />
+    <%= f.text_area :Prequisites %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @job_oppertunity %> |
+<%= link_to 'Back', job_oppertunities_path %>

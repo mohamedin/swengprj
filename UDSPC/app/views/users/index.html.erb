@@ -1,0 +1,46 @@
+<h1>Listing users</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Telephonenumber</th>
+    <th>Email</th>
+    <th>Loginname</th>
+    <th>Password</th>
+    <th>Billingaddress</th>
+    <th>Shippingaddress</th>
+    <th>Creditnumber</th>
+    <th>Secuirtynumber</th>
+    <th>Levelofauthority</th>
+    <th>Type</th>
+    <th>Jobtitle</th>
+    <th>Hiringdate</th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%=h user.Name %></td>
+    <td><%=h user.Address %></td>
+    <td><%=h user.TelephoneNumber %></td>
+    <td><%=h user.EMail %></td>
+    <td><%=h user.LoginName %></td>
+    <td><%=h user.Password %></td>
+    <td><%=h user.BillingAddress %></td>
+    <td><%=h user.ShippingAddress %></td>
+    <td><%=h user.CreditNumber %></td>
+    <td><%=h user.SecuirtyNumber %></td>
+    <td><%=h user.LevelOfAuthority %></td>
+    <td><%=h user.Type %></td>
+    <td><%=h user.JobTitle %></td>
+    <td><%=h user.HiringDate %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New user', new_user_path %>

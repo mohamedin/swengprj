@@ -1,0 +1,28 @@
+<h1>Listing job_oppertunities</h1>
+
+<table>
+  <tr>
+    <th>Jobtitle</th>
+    <th>Salary</th>
+    <th>Department</th>
+    <th>Description</th>
+    <th>Prequisites</th>
+  </tr>
+
+<% @job_oppertunities.each do |job_oppertunity| %>
+  <tr>
+    <td><%=h job_oppertunity.JobTitle %></td>
+    <td><%=h job_oppertunity.Salary %></td>
+    <td><%=h job_oppertunity.Department %></td>
+    <td><%=h job_oppertunity.Description %></td>
+    <td><%=h job_oppertunity.Prequisites %></td>
+    <td><%= link_to 'Show', job_oppertunity %></td>
+    <td><%= link_to 'Edit', edit_job_oppertunity_path(job_oppertunity) %></td>
+    <td><%= link_to 'Destroy', job_oppertunity, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New job_oppertunity', new_job_oppertunity_path %>

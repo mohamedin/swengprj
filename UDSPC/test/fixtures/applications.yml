@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  applicant_id: 1
+  job_oppertunity_id: 1
+  SendingDate: 2009-05-15 16:02:09
+
+two:
+  applicant_id: 1
+  job_oppertunity_id: 1
+  SendingDate: 2009-05-15 16:02:09

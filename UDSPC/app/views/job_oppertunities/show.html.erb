@@ -1,0 +1,28 @@
+<p>
+  <b>Jobtitle:</b>
+  <%=h @job_oppertunity.JobTitle %>
+</p>
+
+<p>
+  <b>Salary:</b>
+  <%=h @job_oppertunity.Salary %>
+</p>
+
+<p>
+  <b>Department:</b>
+  <%=h @job_oppertunity.Department %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @job_oppertunity.Description %>
+</p>
+
+<p>
+  <b>Prequisites:</b>
+  <%=h @job_oppertunity.Prequisites %>
+</p>
+
+
+<%= link_to 'Edit', edit_job_oppertunity_path(@job_oppertunity) %> |
+<%= link_to 'Back', job_oppertunities_path %>
