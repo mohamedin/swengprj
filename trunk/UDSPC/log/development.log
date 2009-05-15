@@ -1978,3 +1978,125 @@ _at, time)
    ^
 c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
 Completed in 45ms (View: 31, DB: 1) | 200 OK [http://localhost/keywords/1]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20090428201410)
+Migrating to CreateProducts (20090428201649)
+Migrating to CreateProductModels (20090428202057)
+Migrating to CreateKeywords (20090515120410)
+Migrating to AddProductModelIdToKeywords (20090515121225)
+Migrating to CreateOrders (20090515125440)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "OrderDate" datetime, "ConfimationNumber" integer, "OrderStatus" integer, "TotalPrice" decimal, "PaymentMethod" integer, "PurchaseNumber" integer, "ShippingCosts" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090515125440')[0m
+  [4;35;1mSQL (2.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("keywords")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("orders")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("product_models")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("products")[0m
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-05-15 15:55:22) [GET]
+  [4;35;1mOrder Load (1.0ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/orders
+Rendering orders/index
+Completed in 34ms (View: 23, DB: 1) | 200 OK [http://localhost/orders]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20090428201410)
+Migrating to CreateProducts (20090428201649)
+Migrating to CreateProductModels (20090428202057)
+Migrating to CreateKeywords (20090515120410)
+Migrating to AddProductModelIdToKeywords (20090515121225)
+Migrating to CreateOrders (20090515125440)
+Migrating to CreateOrderItems (20090515130252)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20090428201410)
+Migrating to CreateProducts (20090428201649)
+Migrating to CreateProductModels (20090428202057)
+Migrating to CreateKeywords (20090515120410)
+Migrating to AddProductModelIdToKeywords (20090515121225)
+Migrating to CreateOrders (20090515125440)
+Migrating to CreateOrderItems (20090515130706)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "order_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "order_id" integer, "Quantity" integer, "ItemPrice" decimal, "Taxs" decimal, "discount" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090515130706')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("keywords")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("order_items")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("orders")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("product_models")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("products")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-15 16:14:58) [GET]
+
+ActionController::RoutingError (No route matches "/order_models" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrderItemsController#index (for 127.0.0.1 at 2009-05-15 16:15:09) [GET]
+  [4;36;1mOrderItem Load (1.0ms)[0m   [0;1mSELECT * FROM "order_items" [0m
+Rendering template within layouts/order_items
+Rendering order_items/index
+Completed in 34ms (View: 23, DB: 1) | 200 OK [http://localhost/order_items]
+
+
+Processing OrderItemsController#new (for 127.0.0.1 at 2009-05-15 16:15:12) [GET]
+Rendering template within layouts/order_items
+Rendering order_items/new
+Completed in 27ms (View: 14, DB: 0) | 200 OK [http://localhost/order_items/new]
+
+
+Processing OrderItemsController#create (for 127.0.0.1 at 2009-05-15 16:15:17) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"fZdmyAMvuIuGbh/WpP08EBwTQ/5Fqh3XoSi2IMHrhOg=", "order_item"=>{"ItemPrice"=>"", "Quantity"=>"", "discount"=>"", "order_id"=>"", "Taxs"=>"22.2"}}
+  [4;35;1mOrderItem Create (1.0ms)[0m   [0mINSERT INTO "order_items" ("Quantity", "ItemPrice", "order_id", "discount", "updated_at", "Taxs", "created_at") VALUES(NULL, NULL, NULL, NULL, '2009-05-15 13:15:17', 22.2, '2009-05-15 13:15:17')[0m
+Redirected to http://localhost:3002/order_items/1
+Completed in 88ms (DB: 1) | 302 Found [http://localhost/order_items]
+
+
+Processing OrderItemsController#show (for 127.0.0.1 at 2009-05-15 16:15:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mOrderItem Load (1.0ms)[0m   [0;1mSELECT * FROM "order_items" WHERE ("order_items"."id" = 1) [0m
+Rendering template within layouts/order_items
+Rendering order_items/show
+Completed in 34ms (View: 13, DB: 1) | 200 OK [http://localhost/order_items/1]
+
+
+Processing OrderItemsController#index (for 127.0.0.1 at 2009-05-15 16:15:20) [GET]
+  [4;35;1mOrderItem Load (1.0ms)[0m   [0mSELECT * FROM "order_items" [0m
+Rendering template within layouts/order_items
+Rendering order_items/index
+Completed in 23ms (View: 9, DB: 1) | 200 OK [http://localhost/order_items]

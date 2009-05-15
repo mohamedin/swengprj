@@ -1,0 +1,38 @@
+<p>
+  <b>Orderdate:</b>
+  <%=h @order.OrderDate %>
+</p>
+
+<p>
+  <b>Confimationnumber:</b>
+  <%=h @order.ConfimationNumber %>
+</p>
+
+<p>
+  <b>Orderstatus:</b>
+  <%=h @order.OrderStatus %>
+</p>
+
+<p>
+  <b>Totalprice:</b>
+  <%=h @order.TotalPrice %>
+</p>
+
+<p>
+  <b>Paymentmethod:</b>
+  <%=h @order.PaymentMethod %>
+</p>
+
+<p>
+  <b>Purchasenumber:</b>
+  <%=h @order.PurchaseNumber %>
+</p>
+
+<p>
+  <b>Shippingcosts:</b>
+  <%=h @order.ShippingCosts %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
