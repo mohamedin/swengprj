@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  JobTitle: MyString
+  Salary: 1
+  Department: MyString
+  Description: MyText
+  Prequisites: MyText
+
+two:
+  JobTitle: MyString
+  Salary: 1
+  Department: MyString
+  Description: MyText
+  Prequisites: MyText

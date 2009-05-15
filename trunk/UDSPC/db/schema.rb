@@ -9,7 +9,37 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090515130706) do
+ActiveRecord::Schema.define(:version => 20090515130209) do
+
+  create_table "applicants", :force => true do |t|
+    t.string   "Name"
+    t.string   "Address"
+    t.string   "TelephoneNumber"
+    t.string   "EMail"
+    t.string   "LoginName"
+    t.string   "Password"
+    t.string   "BillingAddress"
+    t.string   "ShippingAddress"
+    t.string   "CreditNumber"
+    t.string   "SecuirtyNumber"
+    t.string   "DesieredPosition"
+    t.string   "CurrentPosition"
+    t.string   "Education"
+    t.text     "Experience"
+    t.text     "Notes"
+    t.date     "DateOfBirth"
+    t.integer  "Gender"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "applications", :force => true do |t|
+    t.integer  "applicant_id"
+    t.integer  "job_oppertunity_id"
+    t.datetime "SendingDate"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "categories", :force => true do |t|
     t.string   "Code"
@@ -18,32 +48,41 @@ ActiveRecord::Schema.define(:version => 20090515130706) do
     t.datetime "updated_at"
   end
 
-  create_table "keywords", :force => true do |t|
-    t.string   "Word"
-    t.integer  "product_id"
+  create_table "customers", :force => true do |t|
+    t.string   "Name"
+    t.string   "Address"
+    t.string   "TelephoneNumber"
+    t.string   "EMail"
+    t.string   "LoginName"
+    t.string   "Password"
+    t.string   "BillingAddress"
+    t.string   "ShippingAddress"
+    t.string   "CreditNumber"
+    t.string   "SecuirtyNumber"
+    t.integer  "Type"
+    t.string   "Fax"
+    t.string   "ContactPersonName"
+    t.string   "TaxsNumber"
+    t.string   "BussinessName"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "product_model_id"
   end
 
-  create_table "order_items", :force => true do |t|
-    t.integer  "order_id"
-    t.integer  "Quantity"
-    t.decimal  "ItemPrice"
-    t.decimal  "Taxs"
-    t.decimal  "discount"
+  create_table "job_oppertunities", :force => true do |t|
+    t.string   "JobTitle"
+    t.integer  "Salary"
+    t.string   "Department"
+    t.text     "Description"
+    t.text     "Prequisites"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "orders", :force => true do |t|
-    t.datetime "OrderDate"
-    t.integer  "ConfimationNumber"
-    t.integer  "OrderStatus"
-    t.decimal  "TotalPrice"
-    t.integer  "PaymentMethod"
-    t.integer  "PurchaseNumber"
-    t.decimal  "ShippingCosts"
+  create_table "permissions", :force => true do |t|
+    t.integer  "PermissionType"
+    t.string   "Page"
+    t.string   "Module"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -77,6 +116,25 @@ ActiveRecord::Schema.define(:version => 20090515130706) do
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated\n_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "Name"
+    t.string   "Address"
+    t.string   "TelephoneNumber"
+    t.string   "EMail"
+    t.string   "LoginName"
+    t.string   "Password"
+    t.string   "BillingAddress"
+    t.string   "ShippingAddress"
+    t.string   "CreditNumber"
+    t.string   "SecuirtyNumber"
+    t.integer  "LevelOfAuthority"
+    t.integer  "Type"
+    t.string   "JobTitle"
+    t.date     "HiringDate"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

@@ -1,0 +1,27 @@
+<h1>New permission</h1>
+
+<% form_for(@permission) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :PermissionType %><br />
+    <%= f.text_field :PermissionType %>
+  </p>
+  <p>
+    <%= f.label :Page %><br />
+    <%= f.text_field :Page %>
+  </p>
+  <p>
+    <%= f.label :Module %><br />
+    <%= f.text_field :Module %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', permissions_path %>

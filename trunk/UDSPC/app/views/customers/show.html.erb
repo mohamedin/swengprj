@@ -1,0 +1,78 @@
+<p>
+  <b>Name:</b>
+  <%=h @customer.Name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @customer.Address %>
+</p>
+
+<p>
+  <b>Telephonenumber:</b>
+  <%=h @customer.TelephoneNumber %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @customer.EMail %>
+</p>
+
+<p>
+  <b>Loginname:</b>
+  <%=h @customer.LoginName %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @customer.Password %>
+</p>
+
+<p>
+  <b>Billingaddress:</b>
+  <%=h @customer.BillingAddress %>
+</p>
+
+<p>
+  <b>Shippingaddress:</b>
+  <%=h @customer.ShippingAddress %>
+</p>
+
+<p>
+  <b>Creditnumber:</b>
+  <%=h @customer.CreditNumber %>
+</p>
+
+<p>
+  <b>Secuirtynumber:</b>
+  <%=h @customer.SecuirtyNumber %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @customer.Type %>
+</p>
+
+<p>
+  <b>Fax:</b>
+  <%=h @customer.Fax %>
+</p>
+
+<p>
+  <b>Contactpersonname:</b>
+  <%=h @customer.ContactPersonName %>
+</p>
+
+<p>
+  <b>Taxsnumber:</b>
+  <%=h @customer.TaxsNumber %>
+</p>
+
+<p>
+  <b>Bussinessname:</b>
+  <%=h @customer.BussinessName %>
+</p>
+
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

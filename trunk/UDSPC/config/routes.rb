@@ -1,4 +1,16 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :applications
+
+  map.resources :job_oppertunities
+
+  map.resources :permissions
+
+  map.resources :users
+
+  map.resources :applicants
+
+  map.resources :customers
+  
   map.resources :order_items
 
   map.resources :order_items

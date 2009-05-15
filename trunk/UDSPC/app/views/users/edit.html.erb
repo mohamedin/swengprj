@@ -1,0 +1,68 @@
+<h1>Editing user</h1>
+
+<% form_for(@user) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :Name %><br />
+    <%= f.text_field :Name %>
+  </p>
+  <p>
+    <%= f.label :Address %><br />
+    <%= f.text_field :Address %>
+  </p>
+  <p>
+    <%= f.label :TelephoneNumber %><br />
+    <%= f.text_field :TelephoneNumber %>
+  </p>
+  <p>
+    <%= f.label :EMail %><br />
+    <%= f.text_field :EMail %>
+  </p>
+  <p>
+    <%= f.label :LoginName %><br />
+    <%= f.text_field :LoginName %>
+  </p>
+  <p>
+    <%= f.label :Password %><br />
+    <%= f.text_field :Password %>
+  </p>
+  <p>
+    <%= f.label :BillingAddress %><br />
+    <%= f.text_field :BillingAddress %>
+  </p>
+  <p>
+    <%= f.label :ShippingAddress %><br />
+    <%= f.text_field :ShippingAddress %>
+  </p>
+  <p>
+    <%= f.label :CreditNumber %><br />
+    <%= f.text_field :CreditNumber %>
+  </p>
+  <p>
+    <%= f.label :SecuirtyNumber %><br />
+    <%= f.text_field :SecuirtyNumber %>
+  </p>
+  <p>
+    <%= f.label :LevelOfAuthority %><br />
+    <%= f.text_field :LevelOfAuthority %>
+  </p>
+  <p>
+    <%= f.label :Type %><br />
+    <%= f.text_field :Type %>
+  </p>
+  <p>
+    <%= f.label :JobTitle %><br />
+    <%= f.text_field :JobTitle %>
+  </p>
+  <p>
+    <%= f.label :HiringDate %><br />
+    <%= f.date_select :HiringDate %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>

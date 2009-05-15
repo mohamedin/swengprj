@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  PermissionType: 1
+  Page: MyString
+  Module: MyString
+  user_id: 1
+
+two:
+  PermissionType: 1
+  Page: MyString
+  Module: MyString
+  user_id: 1

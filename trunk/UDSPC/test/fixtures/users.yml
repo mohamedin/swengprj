@@ -1,0 +1,33 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  Name: MyString
+  Address: MyString
+  TelephoneNumber: MyString
+  EMail: MyString
+  LoginName: MyString
+  Password: MyString
+  BillingAddress: MyString
+  ShippingAddress: MyString
+  CreditNumber: MyString
+  SecuirtyNumber: MyString
+  LevelOfAuthority: 1
+  Type: 1
+  JobTitle: MyString
+  HiringDate: 2009-05-15
+
+two:
+  Name: MyString
+  Address: MyString
+  TelephoneNumber: MyString
+  EMail: MyString
+  LoginName: MyString
+  Password: MyString
+  BillingAddress: MyString
+  ShippingAddress: MyString
+  CreditNumber: MyString
+  SecuirtyNumber: MyString
+  LevelOfAuthority: 1
+  Type: 1
+  JobTitle: MyString
+  HiringDate: 2009-05-15
