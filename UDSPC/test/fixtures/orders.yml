@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  OrderDate: 2009-05-15 15:54:40
+  ConfimationNumber: 1
+  OrderStatus: 1
+  TotalPrice: 9.99
+  PaymentMethod: 1
+  PurchaseNumber: 1
+  ShippingCosts: 9.99
+
+two:
+  OrderDate: 2009-05-15 15:54:40
+  ConfimationNumber: 1
+  OrderStatus: 1
+  TotalPrice: 9.99
+  PaymentMethod: 1
+  PurchaseNumber: 1
+  ShippingCosts: 9.99
