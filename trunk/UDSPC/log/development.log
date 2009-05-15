@@ -1153,3 +1153,828 @@ _at, time)
 c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
 Completed in 93ms (View: 67, DB: 4) | 200 OK [http://127.0.0.1/product_models]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2009-05-15 14:18:27) [GET]
+  [4;36;1mProduct Load (16.0ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+Completed in 3042ms (View: 2886, DB: 16) | 200 OK [http://localhost/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2009-05-15 14:18:41) [GET]
+Rendering template within layouts/products
+Rendering products/new
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" ORDER BY Name[0m
+Completed in 48ms (View: 32, DB: 0) | 200 OK [http://localhost/products/new]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2009-05-15 14:29:20) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20090428201410)
+Migrating to CreateProducts (20090428201649)
+Migrating to CreateProductModels (20090428202057)
+Migrating to CreateKeywords (20090515120151)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20090428201410)
+Migrating to CreateProducts (20090428201649)
+Migrating to CreateProductModels (20090428202057)
+Migrating to CreateKeywords (20090515120410)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "keywords" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Word" varchar(255), "product_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090515120410')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("keywords")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("product_models")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("products")[0m
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-05-15 15:05:01) [GET]
+  [4;35;1mKeyword Load (1.0ms)[0m   [0mSELECT * FROM "keywords" [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Completed in 36ms (View: 24, DB: 1) | 200 OK [http://localhost/keywords]
+
+
+Processing KeywordsController#new (for 127.0.0.1 at 2009-05-15 15:05:03) [GET]
+Rendering template within layouts/keywords
+Rendering keywords/new
+Completed in 21ms (View: 10, DB: 0) | 200 OK [http://localhost/keywords/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20090428201410)
+Migrating to CreateProducts (20090428201649)
+Migrating to CreateProductModels (20090428202057)
+Migrating to CreateKeywords (20090515120410)
+Migrating to AddProductModelIdToKeywords (20090515121225)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mALTER TABLE "keywords" ADD "product_model_id" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090515121225')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (2.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("keywords")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("product_models")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("products")[0m
+
+
+Processing KeywordsController#new (for 127.0.0.1 at 2009-05-15 15:15:27) [GET]
+Rendering template within layouts/keywords
+Rendering keywords/new
+Completed in 20ms (View: 6, DB: 0) | 200 OK [http://localhost/keywords/new]
+
+
+Processing KeywordsController#create (for 127.0.0.1 at 2009-05-15 15:15:33) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"fZdmyAMvuIuGbh/WpP08EBwTQ/5Fqh3XoSi2IMHrhOg=", "keyword"=>{"product_id"=>"1", "Word"=>"dd"}}
+  [4;36;1mKeyword Create (2.0ms)[0m   [0;1mINSERT INTO "keywords" ("updated_at", "product_model_id", "product_id", "Word", "created_at") VALUES('2009-05-15 12:15:34', NULL, 1, 'dd', '2009-05-15 12:15:34')[0m
+Redirected to http://localhost:3002/keywords/1
+Completed in 23ms (DB: 2) | 302 Found [http://localhost/keywords]
+
+
+Processing KeywordsController#show (for 127.0.0.1 at 2009-05-15 15:15:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKeyword Load (0.0ms)[0m   [0mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/show
+Completed in 27ms (View: 10, DB: 0) | 200 OK [http://localhost/keywords/1]
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-05-15 15:15:36) [GET]
+  [4;36;1mKeyword Load (1.0ms)[0m   [0;1mSELECT * FROM "keywords" [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Completed in 22ms (View: 7, DB: 1) | 200 OK [http://localhost/keywords]
+
+
+Processing KeywordsController#edit (for 127.0.0.1 at 2009-05-15 15:16:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKeyword Load (0.0ms)[0m   [0mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/edit
+Completed in 25ms (View: 13, DB: 0) | 200 OK [http://localhost/keywords/1/edit]
+
+
+Processing KeywordsController#edit (for 127.0.0.1 at 2009-05-15 15:18:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mKeyword Load (0.0ms)[0m   [0;1mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/edit
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+Completed in 101ms (View: 89, DB: 0) | 200 OK [http://localhost/keywords/1/edit]
+
+
+Processing KeywordsController#edit (for 127.0.0.1 at 2009-05-15 15:18:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mKeyword Load (0.0ms)[0m   [0;1mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/edit
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+
+ActionView::TemplateError (Expected C:/Users/admin/Documents/Aptana Studio/UDSPC/app/models/product_model.rb to define Product_model) on line #17 of app/views/keywords/edit.html.erb:
+14:   </p>
+15:   <p>
+16:     <%= f.label :product_model_id %><br />
+17:     <%= f.select :product_model_id , Product_model.find(:all , :order => "Name").collect { |c|
+18: 		[c.Name , c.id]}%>
+19:   </p>
+20:   <p>
+
+    app/views/keywords/edit.html.erb:17
+    app/views/keywords/edit.html.erb:3
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (139.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing KeywordsController#edit (for 127.0.0.1 at 2009-05-15 15:19:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mKeyword Load (0.0ms)[0m   [0;1mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/edit
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;36;1mProductModel Load (1.0ms)[0m   [0;1mSELECT * FROM "product_models" ORDER BY Name[0m
+Completed in 117ms (View: 51, DB: 2) | 200 OK [http://localhost/keywords/1/edit]
+
+
+Processing KeywordsController#edit (for 127.0.0.1 at 2009-05-15 15:20:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKeyword Load (0.0ms)[0m   [0mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/edit
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProductModel Load (1.0ms)[0m   [0mSELECT * FROM "product_models" ORDER BY Name[0m
+Completed in 66ms (View: 51, DB: 1) | 200 OK [http://localhost/keywords/1/edit]
+
+
+Processing KeywordsController#edit (for 127.0.0.1 at 2009-05-15 15:21:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mKeyword Load (0.0ms)[0m   [0;1mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/edit
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;36;1mProductModel Load (1.0ms)[0m   [0;1mSELECT * FROM "product_models" ORDER BY Name[0m
+Completed in 122ms (View: 108, DB: 2) | 200 OK [http://localhost/keywords/1/edit]
+
+
+Processing KeywordsController#edit (for 127.0.0.1 at 2009-05-15 15:22:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKeyword Load (0.0ms)[0m   [0mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/edit
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProductModel Load (1.0ms)[0m   [0mSELECT * FROM "product_models" ORDER BY Name[0m
+Completed in 69ms (View: 50, DB: 2) | 200 OK [http://localhost/keywords/1/edit]
+
+
+Processing KeywordsController#edit (for 127.0.0.1 at 2009-05-15 15:22:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mKeyword Load (1.0ms)[0m   [0;1mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/edit
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;36;1mProductModel Load (1.0ms)[0m   [0;1mSELECT * FROM "product_models" ORDER BY Name[0m
+Completed in 64ms (View: 50, DB: 2) | 200 OK [http://localhost/keywords/1/edit]
+
+
+Processing KeywordsController#edit (for 127.0.0.1 at 2009-05-15 15:23:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKeyword Load (0.0ms)[0m   [0mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/edit
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProductModel Load (1.0ms)[0m   [0mSELECT * FROM "product_models" ORDER BY Name[0m
+Completed in 64ms (View: 50, DB: 1) | 200 OK [http://localhost/keywords/1/edit]
+
+
+Processing KeywordsController#edit (for 127.0.0.1 at 2009-05-15 15:23:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mKeyword Load (0.0ms)[0m   [0;1mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/edit
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;36;1mProductModel Load (1.0ms)[0m   [0;1mSELECT * FROM "product_models" ORDER BY Name[0m
+Completed in 143ms (View: 126, DB: 2) | 200 OK [http://localhost/keywords/1/edit]
+
+
+Processing KeywordsController#edit (for 127.0.0.1 at 2009-05-15 15:27:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKeyword Load (1.0ms)[0m   [0mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/edit
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProductModel Load (1.0ms)[0m   [0mSELECT * FROM "product_models" ORDER BY Name[0m
+Completed in 66ms (View: 52, DB: 3) | 200 OK [http://localhost/keywords/1/edit]
+
+
+Processing KeywordsController#edit (for 127.0.0.1 at 2009-05-15 15:28:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mKeyword Load (1.0ms)[0m   [0;1mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/edit
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;36;1mProductModel Load (1.0ms)[0m   [0;1mSELECT * FROM "product_models" ORDER BY Name[0m
+Completed in 63ms (View: 50, DB: 2) | 200 OK [http://localhost/keywords/1/edit]
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-05-15 15:30:39) [GET]
+  [4;35;1mKeyword Load (1.0ms)[0m   [0mSELECT * FROM "keywords" [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Completed in 24ms (View: 10, DB: 1) | 200 OK [http://localhost/keywords]
+
+
+Processing KeywordsController#show (for 127.0.0.1 at 2009-05-15 15:30:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mKeyword Load (1.0ms)[0m   [0;1mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/show
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+
+ActionView::TemplateError (undefined method `productModel' for #<Keyword:0x7298d4c>) on line #13 of app/views/keywords/show.html.erb:
+10: 
+11: <p>
+12:   <b>Product Model:</b>
+13:   <%=h @keyword.productModel.Name %>
+14: </p>
+15: 
+16: <%= link_to 'Edit', edit_keyword_path(@keyword) %> |
+
+    app/views/keywords/show.html.erb:13
+    app/controllers/keywords_controller.rb:18:in `show'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (76.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing KeywordsController#show (for 127.0.0.1 at 2009-05-15 15:31:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mKeyword Load (0.0ms)[0m   [0;1mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/show
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+Completed in 38ms (View: 25, DB: 1) | 200 OK [http://localhost/keywords/1]
+
+
+Processing KeywordsController#edit (for 127.0.0.1 at 2009-05-15 15:31:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mKeyword Load (1.0ms)[0m   [0;1mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/edit
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;36;1mProductModel Load (1.0ms)[0m   [0;1mSELECT * FROM "product_models" ORDER BY Name[0m
+Completed in 57ms (View: 43, DB: 3) | 200 OK [http://localhost/keywords/1/edit]
+
+
+Processing KeywordsController#update (for 127.0.0.1 at 2009-05-15 15:31:15) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"fZdmyAMvuIuGbh/WpP08EBwTQ/5Fqh3XoSi2IMHrhOg=", "id"=>"1", "keyword"=>{"product_model_id"=>"1", "product_id"=>"1", "Word"=>"dd"}}
+  [4;35;1mKeyword Load (0.0ms)[0m   [0mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+  [4;36;1mKeyword Update (2.0ms)[0m   [0;1mUPDATE "keywords" SET "product_model_id" = 1, "updated_at" = '2009-05-15 12:31:15' WHERE "id" = 1[0m
+Redirected to http://localhost:3002/keywords/1
+Completed in 28ms (DB: 2) | 302 Found [http://localhost/keywords/1]
+
+
+Processing KeywordsController#show (for 127.0.0.1 at 2009-05-15 15:31:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKeyword Load (0.0ms)[0m   [0mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/show
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+Completed in 35ms (View: 21, DB: 1) | 200 OK [http://localhost/keywords/1]
+
+
+Processing KeywordsController#show (for 127.0.0.1 at 2009-05-15 15:31:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKeyword Load (0.0ms)[0m   [0mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/show
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProductModel Load (1.0ms)[0m   [0mSELECT * FROM "product_models" WHERE ("product_models"."id" = 1) [0m
+Completed in 54ms (View: 39, DB: 2) | 200 OK [http://localhost/keywords/1]
+
+
+Processing KeywordsController#edit (for 127.0.0.1 at 2009-05-15 15:31:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mKeyword Load (0.0ms)[0m   [0;1mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/edit
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;36;1mProductModel Load (1.0ms)[0m   [0;1mSELECT * FROM "product_models" ORDER BY Name[0m
+Completed in 67ms (View: 50, DB: 1) | 200 OK [http://localhost/keywords/1/edit]
+
+
+Processing KeywordsController#update (for 127.0.0.1 at 2009-05-15 15:31:33) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"fZdmyAMvuIuGbh/WpP08EBwTQ/5Fqh3XoSi2IMHrhOg=", "id"=>"1", "keyword"=>{"product_model_id"=>"", "product_id"=>"1", "Word"=>"dd"}}
+  [4;35;1mKeyword Load (0.0ms)[0m   [0mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+  [4;36;1mKeyword Update (2.0ms)[0m   [0;1mUPDATE "keywords" SET "product_model_id" = NULL, "updated_at" = '2009-05-15 12:31:33' WHERE "id" = 1[0m
+Redirected to http://localhost:3002/keywords/1
+Completed in 25ms (DB: 2) | 302 Found [http://localhost/keywords/1]
+
+
+Processing KeywordsController#show (for 127.0.0.1 at 2009-05-15 15:31:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKeyword Load (0.0ms)[0m   [0mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/show
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.Name) on line #13 of app/views/keywords/show.html.erb:
+10: 
+11: <p>
+12:   <b>Product Model:</b>
+13:   <%=h @keyword.product_model.Name%>
+14: </p>
+15: 
+16: <%= link_to 'Edit', edit_keyword_path(@keyword) %> |
+
+    app/views/keywords/show.html.erb:13
+    app/controllers/keywords_controller.rb:18:in `show'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (75.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing KeywordsController#show (for 127.0.0.1 at 2009-05-15 15:33:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKeyword Load (1.0ms)[0m   [0mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/show
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+Completed in 47ms (View: 34, DB: 1) | 200 OK [http://localhost/keywords/1]
+
+
+Processing KeywordsController#edit (for 127.0.0.1 at 2009-05-15 15:34:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKeyword Load (0.0ms)[0m   [0mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/edit
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProductModel Load (1.0ms)[0m   [0mSELECT * FROM "product_models" ORDER BY Name[0m
+Completed in 58ms (View: 43, DB: 1) | 200 OK [http://localhost/keywords/1/edit]
+
+
+Processing KeywordsController#update (for 127.0.0.1 at 2009-05-15 15:34:02) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"fZdmyAMvuIuGbh/WpP08EBwTQ/5Fqh3XoSi2IMHrhOg=", "id"=>"1", "keyword"=>{"product_model_id"=>"1", "product_id"=>"1", "Word"=>"dd"}}
+  [4;36;1mKeyword Load (1.0ms)[0m   [0;1mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+  [4;35;1mKeyword Update (2.0ms)[0m   [0mUPDATE "keywords" SET "product_model_id" = 1, "updated_at" = '2009-05-15 12:34:02' WHERE "id" = 1[0m
+Redirected to http://localhost:3002/keywords/1
+Completed in 25ms (DB: 3) | 302 Found [http://localhost/keywords/1]
+
+
+Processing KeywordsController#show (for 127.0.0.1 at 2009-05-15 15:34:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mKeyword Load (0.0ms)[0m   [0;1mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/show
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;36;1mProductModel Load (1.0ms)[0m   [0;1mSELECT * FROM "product_models" WHERE ("product_models"."id" = 1) [0m
+Completed in 51ms (View: 37, DB: 1) | 200 OK [http://localhost/keywords/1]
+
+
+Processing KeywordsController#edit (for 127.0.0.1 at 2009-05-15 15:34:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKeyword Load (0.0ms)[0m   [0mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/edit
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProductModel Load (1.0ms)[0m   [0mSELECT * FROM "product_models" ORDER BY Name[0m
+Completed in 58ms (View: 43, DB: 2) | 200 OK [http://localhost/keywords/1/edit]
+
+
+Processing KeywordsController#update (for 127.0.0.1 at 2009-05-15 15:34:50) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"fZdmyAMvuIuGbh/WpP08EBwTQ/5Fqh3XoSi2IMHrhOg=", "id"=>"1", "keyword"=>{"product_model_id"=>"", "product_id"=>"", "Word"=>"dd"}}
+  [4;36;1mKeyword Load (1.0ms)[0m   [0;1mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+  [4;35;1mKeyword Update (2.0ms)[0m   [0mUPDATE "keywords" SET "product_model_id" = NULL, "product_id" = NULL, "updated_at" = '2009-05-15 12:34:50' WHERE "id" = 1[0m
+Redirected to http://localhost:3002/keywords/1
+Completed in 26ms (DB: 3) | 302 Found [http://localhost/keywords/1]
+
+
+Processing KeywordsController#show (for 127.0.0.1 at 2009-05-15 15:34:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mKeyword Load (0.0ms)[0m   [0;1mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/show
+Completed in 42ms (View: 29, DB: 0) | 200 OK [http://localhost/keywords/1]
+
+
+Processing KeywordsController#show (for 127.0.0.1 at 2009-05-15 15:37:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKeyword Load (1.0ms)[0m   [0mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/show
+Completed in 33ms (View: 20, DB: 1) | 200 OK [http://localhost/keywords/1]
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-05-15 15:37:18) [GET]
+  [4;36;1mKeyword Load (0.0ms)[0m   [0;1mSELECT * FROM "keywords" [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.product) on line #13 of app/views/keywords/index.html.erb:
+10:   <tr>
+11:     <td><%=h keyword.Word %></td>
+12:     <td>
+13: 	  <%if @keyword.product != nil %>
+14: 		  <%=h @keyword.product.Name %>
+15: 	  <%end%>
+16: 	</td>
+
+    app/views/keywords/index.html.erb:13
+    app/views/keywords/index.html.erb:9:in `each'
+    app/views/keywords/index.html.erb:9
+    app/controllers/keywords_controller.rb:7:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (138.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-05-15 15:38:13) [GET]
+  [4;35;1mKeyword Load (1.0ms)[0m   [0mSELECT * FROM "keywords" [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Completed in 24ms (View: 11, DB: 1) | 200 OK [http://localhost/keywords]
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-05-15 15:38:33) [GET]
+  [4;36;1mKeyword Load (1.0ms)[0m   [0;1mSELECT * FROM "keywords" [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Completed in 55ms (View: 40, DB: 1) | 200 OK [http://localhost/keywords]
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-05-15 15:38:52) [GET]
+  [4;35;1mKeyword Load (1.0ms)[0m   [0mSELECT * FROM "keywords" [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Completed in 103ms (View: 92, DB: 1) | 200 OK [http://localhost/keywords]
+
+
+Processing KeywordsController#new (for 127.0.0.1 at 2009-05-15 15:39:49) [GET]
+Rendering template within layouts/keywords
+Rendering keywords/new
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProductModel Load (1.0ms)[0m   [0mSELECT * FROM "product_models" ORDER BY Name[0m
+Completed in 79ms (View: 62, DB: 1) | 200 OK [http://localhost/keywords/new]
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-05-15 15:39:54) [GET]
+  [4;36;1mKeyword Load (1.0ms)[0m   [0;1mSELECT * FROM "keywords" [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Completed in 34ms (View: 24, DB: 1) | 200 OK [http://localhost/keywords]
+
+
+Processing KeywordsController#edit (for 127.0.0.1 at 2009-05-15 15:39:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKeyword Load (1.0ms)[0m   [0mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/edit
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProductModel Load (1.0ms)[0m   [0mSELECT * FROM "product_models" ORDER BY Name[0m
+Completed in 60ms (View: 44, DB: 2) | 200 OK [http://localhost/keywords/1/edit]
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-05-15 15:40:02) [GET]
+  [4;36;1mKeyword Load (1.0ms)[0m   [0;1mSELECT * FROM "keywords" [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Completed in 35ms (View: 23, DB: 1) | 200 OK [http://localhost/keywords]
+
+
+Processing KeywordsController#edit (for 127.0.0.1 at 2009-05-15 15:40:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKeyword Load (0.0ms)[0m   [0mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/edit
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProductModel Load (1.0ms)[0m   [0mSELECT * FROM "product_models" ORDER BY Name[0m
+Completed in 120ms (View: 106, DB: 2) | 200 OK [http://localhost/keywords/1/edit]
+
+
+Processing KeywordsController#index (for 127.0.0.1 at 2009-05-15 15:40:06) [GET]
+  [4;36;1mKeyword Load (1.0ms)[0m   [0;1mSELECT * FROM "keywords" [0m
+Rendering template within layouts/keywords
+Rendering keywords/index
+Completed in 34ms (View: 23, DB: 1) | 200 OK [http://localhost/keywords]
+
+
+Processing KeywordsController#show (for 127.0.0.1 at 2009-05-15 15:40:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKeyword Load (0.0ms)[0m   [0mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/show
+Completed in 42ms (View: 25, DB: 0) | 200 OK [http://localhost/keywords/1]
+
+
+Processing KeywordsController#edit (for 127.0.0.1 at 2009-05-15 15:40:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mKeyword Load (0.0ms)[0m   [0;1mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/edit
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;36;1mProductModel Load (1.0ms)[0m   [0;1mSELECT * FROM "product_models" ORDER BY Name[0m
+Completed in 56ms (View: 42, DB: 2) | 200 OK [http://localhost/keywords/1/edit]
+
+
+Processing KeywordsController#update (for 127.0.0.1 at 2009-05-15 15:40:13) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"fZdmyAMvuIuGbh/WpP08EBwTQ/5Fqh3XoSi2IMHrhOg=", "id"=>"1", "keyword"=>{"product_model_id"=>"", "product_id"=>"1", "Word"=>"dd"}}
+  [4;35;1mKeyword Load (0.0ms)[0m   [0mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+  [4;36;1mKeyword Update (2.0ms)[0m   [0;1mUPDATE "keywords" SET "product_id" = 1, "updated_at" = '2009-05-15 12:40:13' WHERE "id" = 1[0m
+Redirected to http://localhost:3002/keywords/1
+Completed in 24ms (DB: 2) | 302 Found [http://localhost/keywords/1]
+
+
+Processing KeywordsController#show (for 127.0.0.1 at 2009-05-15 15:40:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mKeyword Load (0.0ms)[0m   [0mSELECT * FROM "keywords" WHERE ("keywords"."id" = 1) [0m
+Rendering template within layouts/keywords
+Rendering keywords/show
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+Completed in 45ms (View: 31, DB: 1) | 200 OK [http://localhost/keywords/1]

@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  Word: MyString
+  product_id: 1
+
+two:
+  Word: MyString
+  product_id: 1

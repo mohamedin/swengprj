@@ -9,13 +9,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090428202057) do
+ActiveRecord::Schema.define(:version => 20090515121225) do
 
   create_table "categories", :force => true do |t|
     t.string   "Code"
     t.string   "Name"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "keywords", :force => true do |t|
+    t.string   "Word"
+    t.integer  "product_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "product_model_id"
   end
 
   create_table "product_models", :force => true do |t|
@@ -33,7 +41,7 @@ ActiveRecord::Schema.define(:version => 20090428202057) do
     t.string   "Size"
     t.text     "SalesPackageContent"
     t.string   "RelatedDocumentURL"
-    t.integer  "Product_id"
+    t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -44,9 +52,9 @@ ActiveRecord::Schema.define(:version => 20090428202057) do
     t.text     "Description"
     t.string   "ImageURL"
     t.string   "KeyWords"
-    t.integer  "Category_id"
+    t.integer  "category_id"
     t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "updated\n_at"
   end
 
 end
