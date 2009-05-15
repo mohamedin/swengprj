@@ -1,0 +1,21 @@
+<p>
+  <b>Word:</b>
+  <%=h @keyword.Word %>
+</p>
+
+<p>
+  <b>Product:</b>
+  <%if @keyword.product != nil %>
+	  <%=h @keyword.product.Name %>
+  <%end%>
+</p>
+
+<p>
+  <b>Product Model:</b>
+  <%if @keyword.product_model != nil %>
+	  <%=h @keyword.product_model.Name %> 
+  <%end%>
+</p>
+
+<%= link_to 'Edit', edit_keyword_path(@keyword) %> |
+<%= link_to 'Back', keywords_path %>

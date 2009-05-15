@@ -1,0 +1,26 @@
+<h1>Editing keyword</h1>
+
+<% form_for(@keyword) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :Word %><br />
+    <%= f.text_field :Word %>
+  </p>
+  <p>
+    <%= f.label :product_id %><br />
+	<%= f.select :product_id , Product.find(:all , :order => "Name").collect { |c|
+		[c.Name , c.id]}, :include_blank => true %>
+  </p>
+  <p>
+    <%= f.label :product_model_id %><br />
+    <%= f.select :product_model_id , ProductModel.find(:all , :order => "Name").collect { |c|
+		[c.Name , c.id]}, :include_blank => true%>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @keyword %> |
+<%= link_to 'Back', keywords_path %>
