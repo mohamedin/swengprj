@@ -1,18 +1,15 @@
 class HomeController < ApplicationController
- 
+  layout 'home'
+  
  def index
-      @categories = Category.find(:all);
       @offers = ProductModel.find_by_sql("SELECT * FROM product_models WHERE IsSpecialOffer='t' ORDER BY RANDOM() LIMIT 3");
  end
  
  def sign
-  @categories = Category.find(:all);
      
  end
  
- def search
-  @categories = Category.find(:all);
- 
+ def search 
    if params['id'] != nil
      @list = Product.find(params['id']).product_models
    elsif params['searchKey'] == nil || params['searchKey'].length == 0

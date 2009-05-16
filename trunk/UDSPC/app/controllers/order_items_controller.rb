@@ -1,4 +1,6 @@
 class OrderItemsController < ApplicationController
+  layout 'home'
+  
   # GET /order_items
   # GET /order_items.xml
   def index

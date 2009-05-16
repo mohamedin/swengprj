@@ -1,4 +1,6 @@
 class KeywordsController < ApplicationController
+  layout 'home'
+  
   # GET /keywords
   # GET /keywords.xml
   def index
