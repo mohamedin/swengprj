@@ -1,4 +1,6 @@
 class ApplicantsController < ApplicationController
+  layout 'home'
+  
   # GET /applicants
   # GET /applicants.xml
   def index

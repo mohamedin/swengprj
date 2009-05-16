@@ -1,4 +1,6 @@
 class JobOppertunitiesController < ApplicationController
+  layout 'home'
+  
   # GET /job_oppertunities
   # GET /job_oppertunities.xml
   def index

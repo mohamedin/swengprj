@@ -1,4 +1,6 @@
 class PermissionsController < ApplicationController
+  layout 'home'
+  
   # GET /permissions
   # GET /permissions.xml
   def index

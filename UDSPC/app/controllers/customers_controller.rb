@@ -1,4 +1,6 @@
 class CustomersController < ApplicationController
+  layout 'home'
+  
   # GET /customers
   # GET /customers.xml
   def index
