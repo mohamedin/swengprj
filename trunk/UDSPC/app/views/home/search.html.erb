@@ -1,0 +1,14 @@
+<%	if @list.size == 0 %>
+	<b>No results found, please try to reduce you search criteria</b>
+<% else %>	
+	<%=@list.size%> products was found<br>
+	<ul> 
+	<%for result in @list %>
+		<li>
+			<a href="/product_models/<%=result.id%>"><%=result.Name %></a><br>
+			<b>Price:</b><%=result.Price%><br>
+			<b>Description:</b><br><%=result.Description%>			
+		</li>
+	<% end%>
+	</ul> 
+<% end %>

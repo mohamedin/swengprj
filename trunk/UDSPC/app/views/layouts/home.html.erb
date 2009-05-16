@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>-:: UDSPC Site ::-</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Desciption" content="This web design site is a very good site with wonderful web design resources">
+<meta name="keywords" content="This,web,design,site,is,a,very,good,site,with,wonderful,web,design,resources">
+<link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<center>
+<div class="header">
+	<div style="float:left; margin-left:110px; margin-top:20px;">
+		<img src="/images/logo.jpg" style="float:left;">
+		<div style="float:left;  text-align:left; font-family:tahoma; font-size:24pt; color:#636363; margin-left:5px;margin-top:5px;">U<b>DSP</b>C<br><span style="float:left;  text-align:left; font-family:tahoma; font-size:8pt; color:#b1b1b1;"><b>&nbsp;best devices in the world</b></span></div>
+	</div>
+	<div style="float:right; margin-right:30px; margin-top:50px; text-align:left; font-family:tahoma; font-size:17pt; color:#636363;">the best digital <b>solutions</b><br><span style="float:left;  text-align:left; font-family:tahoma; font-size:8pt; color:#b1b1b1;"><b>&nbsp;best devices in the world</b></span>
+</div>
+
+</div>
+<div class="menu">
+	<div class="menu-text" style="padding-left:140px;padding-right:50px;"><a href="#" class="nav">Home</a></div>
+	<div class="menu-text" style="padding-right:30px;"><a href="#" class="nav">About</a></div>
+	<div class="menu-text" style="padding-right:30px;"><a href="#" class="nav">Products</a></div>
+	<div class="menu-text" style="padding-right:30px;"><a href="#" class="nav">Media</a></div>
+	<div class="menu-text"><a href="#" class="nav">Contact</a></div>
+
+	<div style="float:right; padding-right:25px;padding-top:12px;">
+		<input type="image" src="/images/go.jpg" onclick="document.searchForm.submit()"/>
+	</div>
+	<div style="float:right;padding-right:8px;padding-top:14px;">
+		<form action="/home/search" method="get" name="searchForm">
+			<input style="border:none; height:18px;width:130px;" type="text" name="searchKey" />
+		</form>
+	</div>
+</div>
+<table  width="800px" style="padding-left:150px;padding-right:50px;">
+	<tr>
+		<td valign="top">
+			<div class="left-image">
+				<div class="title1" style="color:#ffffff; border-bottom:solid 1px #00deff; width:200px; padding-bottom:7px;">Website&nbsp;<span class="title2" style="color:#ffffff;">News</span>
+				</div>
+				<div class="date-text">VT-MENA Admission &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15/5/2009</div>
+				<div class="description" style="color:#ffffff; border-bottom:solid 1px #00deff; width:200px; padding-bottom:7px;padding-top:5px;"><b>Admission</b> department at Virginia Tech will send decision to us..</div>
+				<div class="date-text">Project Demo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20/5/2009</div>
+				<div class="description" style="color:#ffffff; width:200px;padding-top:5px;"><b>Our final demo</b> will be shown to valued customers to know their feedback about our initial prototype..</div>
+
+				<div class="title1" style="color:#ffffff; border-bottom:solid 1px #00deff; width:200px; padding-bottom:7px;">Our&nbsp;<span class="title2" style="color:#ffffff;">Products</span></div>
+				<% for cat in @categories %>
+					<ul>
+					<div class="date-text"><%=cat.Name %></div>					
+					<% for prod in cat.products %>
+						<div class="description"><li><a href="/home/search/<%=prod.id%>"><%=prod.Name %></a></li></div>
+					<% end %>	
+					</ul>
+				<% end %>
+				
+				<div class="title1" style="color:#ffffff; border-bottom:solid 1px #00deff; width:200px; padding-bottom:7px;">Jobs</span></div>				
+			</div>
+		</td>
+		<td width="100%" valign="top">					
+			<%=yield%>
+		</td>
+	</tr>
+</table>
+
+<div class="footer">
+Copyright UDSPC (c) 2009, All rights Reserved. Designed by <a title="Web Templates" href="http://www.elegant-templates.com">Elegant Web Templates</a></div>
+
+</center>
+</body>
+</html>
