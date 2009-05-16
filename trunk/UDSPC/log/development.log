@@ -6717,3 +6717,117 @@ C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_me
   [4;36;1mProduct Load (2.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
   [4;35;1mProduct Load (2.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
 Completed in 382ms (View: 96, DB: 232) | 200 OK [http://localhost/product_models/1]
+  [4;36;1mCategory Load (14.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ShoppingCartsController#index (for 127.0.0.1 at 2009-05-16 17:21:26) [GET]
+Rendering shopping_carts/index
+Completed in 58ms (View: 28, DB: 14) | 200 OK [http://localhost/shopping_carts]
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ShoppingCartsController#index (for 127.0.0.1 at 2009-05-16 17:23:27) [GET]
+Rendering shopping_carts/index
+Completed in 29ms (View: 12, DB: 1) | 200 OK [http://localhost/shopping_carts]
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing ShoppingCartsController#create (for 127.0.0.1 at 2009-05-16 17:23:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProductModel Load (0.0ms)[0m   [0mSELECT * FROM "product_models" WHERE ("product_models"."id" = 1) [0m
+
+NoMethodError (undefined method `product_model_id=' for #<OrderItem:0x636f3d4>):
+  app/controllers/shopping_carts_controller.rb:12:in `create'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (54.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCategories (20090428201410)
+Migrating to CreateProducts (20090428201649)
+Migrating to CreateProductModels (20090428202057)
+Migrating to CreateKeywords (20090515120410)
+Migrating to AddProductModelIdToKeywords (20090515121225)
+Migrating to CreateOrders (20090515125440)
+Migrating to CreateCustomers (20090515130020)
+Migrating to CreateApplicants (20090515130054)
+Migrating to CreateUsers (20090515130134)
+Migrating to CreatePermissions (20090515130157)
+Migrating to CreateJobOppertunities (20090515130200)
+Migrating to CreateApplications (20090515130209)
+Migrating to CreateOrderItems (20090515130706)
+Migrating to AddProductModelIdToOrderItems (20090515182338)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mALTER TABLE "order_items" ADD "product_model_id" integer[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090515182338')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("applicants")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("applications")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("customers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("job_oppertunities")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("keywords")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("order_items")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("orders")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("permissions")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("product_models")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("products")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-05-16 17:24:19) [GET]
+  [4;35;1mProductModel Load (2.0ms)[0m   [0mSELECT * FROM product_models WHERE IsSpecialOffer='t' ORDER BY RANDOM() LIMIT 3[0m
+Rendering template within layouts/home
+Rendering home/index
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 135ms (View: 120, DB: 4) | 200 OK [http://localhost/home]
+  [4;35;1mCategory Load (2.0ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ShoppingCartsController#create (for 127.0.0.1 at 2009-05-16 17:24:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProductModel Load (0.0ms)[0m   [0;1mSELECT * FROM "product_models" WHERE ("product_models"."id" = 1) [0m
+Redirected to http://localhost:3002/shopping_carts
+Completed in 40ms (DB: 2) | 302 Found [http://localhost/shopping_carts/create/1]
+  [4;35;1mCategory Load (2.0ms)[0m   [0mSELECT * FROM "categories" [0m
+
+
+Processing ShoppingCartsController#index (for 127.0.0.1 at 2009-05-16 17:24:39) [GET]
+Rendering shopping_carts/index
+  [4;36;1mProductModel Load (1.0ms)[0m   [0;1mSELECT * FROM "product_models" WHERE ("product_models"."id" = 1) [0m
+Completed in 40ms (View: 19, DB: 3) | 200 OK [http://localhost/shopping_carts]
