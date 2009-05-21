@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.root :controller => "home"
+  
   map.resources :applications
 
   map.resources :job_oppertunities
@@ -23,7 +25,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :categories
   
-  map.resources :shopping_carts
+  #map.connect 'shopping_carts/update' , :controller => 'shopping_carts', :action => 'update'
+  #map.resources :shopping_carts
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -65,6 +68,7 @@ ActionController::Routing::Routes.draw do |map|
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing the them or commenting them out if you're using named routes and resources.
   
+  map.connect ':controller/:action'
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end

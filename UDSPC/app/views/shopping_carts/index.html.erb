@@ -1,36 +1,28 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-		<title>Untitled Document</title>
-	</head>
-	<body>
-		<% if @cart%>
-		  <form>
-			  <table border="0">
-			  	<tr>
-			  		<td>Product</td>
-					<td>Quantity</td>
-					<td>Price</td>
-					<td>Taxes</td>
-					<td>Total Price</td>
-			  	</tr>
-				<% c = 0%>
-				<% for product in @cart%>
-					<tr>
-						<td><%=h product.product_model.Name%></td>
-						<td><input type="text" value="<%=product.Quantity%>" name="item_<%=c%>"></td>
-						<%c=c+1%>
-						<td><%= product.ItemPrice%></td>
-						<td><%= product.Taxs%></td>
-						<td><%= product.ItemPrice*product.Quantity*(1+product.Taxs) %></td>
-					</tr>
-				<%end%>
-			  </table>
-			  <input type="submit" value="Check out">
-		  </form>
-		<%else%>
-			Cart is empty
+<% if @cart%>
+  <% form_tag "shopping_carts/update/", :method => 'get' do %>
+	  <table border="0">
+	  	<tr>
+	  		<td>Product</td>
+			<td>Quantity</td>
+			<td>Price</td>
+			<td>Taxes</td>
+			<td>Total Price</td>
+	  	</tr>
+		<% c = 0%>
+		<% for product in @cart%>
+			<tr>
+				<td><%=h product.product_model.Name%></td>
+				<td><input type="text" value="<%=product.Quantity%>" name="item_<%=c%>"></td>
+				<%c=c+1%>
+				<td><%= product.ItemPrice%></td>
+				<td><%= product.Taxs%></td>
+				<td><%= product.ItemPrice*product.Quantity*(1+product.Taxs) %></td>
+			</tr>
 		<%end%>
-	</body>
-</html>
+	  </table>
+	  <%= submit_tag "Check out" %> 
+	  <%= submit_tag "Update & Continue shopping" %>
+  <% end %>
+<%else%>
+	Cart is empty
+<%end%>
