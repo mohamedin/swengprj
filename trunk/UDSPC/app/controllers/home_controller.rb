@@ -6,7 +6,11 @@ class HomeController < ApplicationController
  end
  
  def sign
-     
+     @users = User.find(:all, :conditions => ["LoginName = ? AND Password = ?", params[:loginName], params[:password]])
+     if @users.length > 0
+       session[:loggedUser] = @users[0]
+   end
+   @user = session[:loggedUser]
  end
  
  def search 
