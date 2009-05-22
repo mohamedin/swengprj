@@ -4,7 +4,8 @@
   <tr>
     <th>Permissiontype</th>
     <th>Page</th>
-    <th>Module</th>
+    <th>URL</th>
+	<th>Module</th>
     <th>User</th>
   </tr>
 
@@ -12,7 +13,8 @@
   <tr>
     <td><%=h permission.PermissionType %></td>
     <td><%=h permission.Page %></td>
-    <td><%=h permission.Module %></td>
+    <td><%=h permission.url %></td>
+	<td><%=h permission.Module %></td>
     <td><%=h permission.user_id %></td>
     <td><%= link_to 'Show', permission %></td>
     <td><%= link_to 'Edit', edit_permission_path(permission) %></td>

@@ -1,16 +1,31 @@
 class HomeController < ApplicationController
-  layout 'home'
-  
+   layout 'home'
+ 
  def index
-      @offers = ProductModel.find_by_sql("SELECT * FROM product_models WHERE IsSpecialOffer='t' ORDER BY RANDOM() LIMIT 3");
+    @offers = ProductModel.find_by_sql("SELECT * FROM product_models WHERE IsSpecialOffer='t' ORDER BY RANDOM() LIMIT 3");
+ end
+ 
+ def signout
+   session[:loggedUser] = session[:loggedCustomer] = session[:loggedApplicant] = nil;
+   redirect_to('/home/')
  end
  
  def sign
-     @users = User.find(:all, :conditions => ["LoginName = ? AND Password = ?", params[:loginName], params[:password]])
+   @users = User.find(:all, :conditions => ["LoginName = ? AND Password = ?", params[:loginName], params[:password]])
+   if @users.length > 0
+     session[:loggedUser] = @users[0]
+   else
+     @users = Customer.find(:all, :conditions => ["LoginName = ? AND Password = ?", params[:loginName], params[:password]])
      if @users.length > 0
-       session[:loggedUser] = @users[0]
+        session[:loggedCustomer] = @users[0]
+     else
+        @users = Applicant.find(:all, :conditions => ["LoginName = ? AND Password = ?", params[:loginName], params[:password]])
+        if @users.length > 0
+          session[:loggedApplicant] = @users[0]
+        end 
+     end 
    end
-   @user = session[:loggedUser]
+   redirect_to('/home/')
  end
  
  def search 
