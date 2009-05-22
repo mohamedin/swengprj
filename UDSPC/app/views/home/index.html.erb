@@ -47,38 +47,54 @@
 		<td>
 			<div class="wrapper">
 				<div style="width:675px">
-				<div class="second-section">
-				<% for off in @offers %>
-					<div class="pack-box3">
-					<div class="title1"><span class="title2"><%=off.Name %></span></div>
-					<div class="sub-title"><i>Serial:<%=off.Serial %></i></div>
-					<div class="description">Price:<%=off.Price %> $</div>					
-					<div class="description"><%=off.Description.slice(0..80) %>...&nbsp;<a href="/product_models/<%=off.id%>">more</a></div>
+					<div class="second-section">
+					<% for off in @offers %>
+						<div class="pack-box3">
+						<div class="title1"><span class="title2"><%=off.Name %></span></div>
+						<div class="sub-title"><i>Serial:<%=off.Serial %></i></div>
+						<div class="description">Price:<%=off.Price %> $</div>					
+						<div class="description"><%=off.Description.slice(0..80) %>...&nbsp;<a href="/product_models/<%=off.id%>">more</a></div>
+						</div>
+					<% end %>
 					</div>
-				<% end %>
-				</div>
+	
+					<div class="third-section">
+						<div class="down-box2">
+							<div class="title3">Why we're Special</div>
+							<div class="description">
+								Learn more about our customer support services 7 days / 24 hours with more than 1000 expert in our customer call centers..
+							</div>
+						</div>
+						<div class="down-box1">
+							<div class="title3">Treating Clients Well</div>
+							<div class="description1">
+								<img src="/images/client.jpg" style="float:right; margin:3px; margin-left:5px;">
+								<ul>
+									<li>Get the product and technical information you need, quickly and easily
+									<li>Stay informed on selected product updates and status changes
+									<li>Choose to receive weekly email updates relevant to you 
+								</ul>
+							</div>
+						</div>
+					</div>
 
-				<div class="third-section">
-				<div class="down-box2">
-				<div class="title3">Why we're Special</div>
-				<div class="description">
-					Learn more about our customer support services 7 days / 24 hours with more than 1000 expert in our customer call centers..
-				</div>
-				</div>
-				<div class="down-box1">
-				<div class="title3">Treating Clients Well</div>
-				<div class="description1">
-				<img src="/images/client.jpg" style="float:right; margin:3px; margin-left:5px;">
-				<ul>
-					<li>Get the product and technical information you need, quickly and easily
-					<li>Stay informed on selected product updates and status changes
-					<li>Choose to receive weekly email updates relevant to you 
-				</ul>
-				</div>
-				</div>
-				</div>
-				</div>
+					<div class="third-section">
+						<div class="down-box2">
+							<div class="title3">Free Downloads</div>
+							<div class="description">
+								Download free software from the site. Analog Devices and its partners have a broad range of offerings from device drivers to complete reference designs.
+							</div>
+						</div>
+						<div class="down-box1">
+							<div class="title3">Development Tools and Software</div>
+							<div class="description1">
+								Developers can get started today with software and development tools tailored to simplify design on TMS320C6000™ High Performance DSPs. Available software and development tools.
+							</div>
+						</div>
+					</div>
 
+
+				</div>
 			</div>
 
 		</td>
