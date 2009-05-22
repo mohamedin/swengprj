@@ -55,6 +55,41 @@
 				<% end %>
 				
 				<div class="title1" style="color:#ffffff; border-bottom:solid 1px #00deff; width:200px; padding-bottom:7px;">Jobs</span></div>				
+				<ul>
+				<% for job in @jobs %>
+					<div class="description"><li><a href="/job_oppertunities/<%=job.id%>"><%=job.JobTitle %></a></li></div>
+				<% end %>
+				</ul>
+				<% if session[:loggedUser] %>
+					<div class="title1" style="color:#ffffff; border-bottom:solid 1px #00deff; width:200px; padding-bottom:7px;">Administration</span></div>
+					<% 
+					  if @permissions 
+					   for permission in @permissions 
+						if @module != permission.Module
+						  if @module != nil %>
+							</ul>
+					<%
+						  end
+						  @module = permission.Module
+					%>
+							<ul>
+							<div class="date-text"><%=@module %></div>	
+						<% end %>				
+						<div class="description"><li><a href="<%=permission.url%>"><%=permission.Page%></a></li></div>
+					<% end
+					  end 
+					%>
+				<% end %>
+				<% if session[:loggedCustomer] %>
+					<div class="title1" style="color:#ffffff; border-bottom:solid 1px #00deff; width:200px; padding-bottom:7px;">My Account</span></div>
+					<div class="date-text"><a href="/customers/<%=session[:loggedCustomer].id%>">Profile</a></div>							
+					<div class="date-text"><a href="/orders/myOrders/<%=session[:loggedCustomer].id%>">Orders</a></div>
+				<% end %>
+				<% if session[:loggedApplicant] %>
+					<div class="title1" style="color:#ffffff; border-bottom:solid 1px #00deff; width:200px; padding-bottom:7px;">My Account</span></div>
+					<div class="date-text"><a href="/applicants/<%=session[:loggedApplicant].id%>">Profile</a></div>							
+					<div class="date-text"><a href="/applications/myApplications/<%=session[:loggedApplicant].id%>">Applications</a></div>
+				<% end %>
 			</div>
 		</td>
 		<td width="100%" valign="top">					

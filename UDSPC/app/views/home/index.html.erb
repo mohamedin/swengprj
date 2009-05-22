@@ -5,7 +5,23 @@
 			<div class="title1">Join Us</div>
 			<div class="description">Register to our powerful system and get full features and support in digital devices.</div>
 			<div class="description">
-				<a href="/customers/new">Sign Up</a>
+				<a href="/customers/new">Sign Up as Customer</a>
+				<br>
+				<a href="/applicants/new">Sign Up as Applicant</a>
+				<br>
+				<% login = session[:loggedUser]
+				   if login == nil
+					 login = session[:loggedCustomer]
+				   end
+				   if login == nil
+					 login = session[:loggedApplicant]
+				   end
+				
+				   if login %>
+					<a href="/home/signout">Sign Out</a>
+					<br>
+					<H3>Welcome...<br><%=login.Name%></H3>
+				<% else %>
 					<form action="/home/sign" method="post">
 						<%= token_tag %>
 						<table>
@@ -21,6 +37,7 @@
 							</tr>
 						</table>
 					</form>
+				<% end %>
 			</div>
 			</div>
 			<div class="mid-image">&nbsp;</div>
@@ -36,7 +53,7 @@
 					<div class="title1"><span class="title2"><%=off.Name %></span></div>
 					<div class="sub-title"><i>Serial:<%=off.Serial %></i></div>
 					<div class="description">Price:<%=off.Price %> $</div>					
-					<div class="description"><%=off.Description.slice(0..80) %>&nbsp;<a href="/product_models/<%=off.id%>">more</a></div>
+					<div class="description"><%=off.Description.slice(0..80) %>...&nbsp;<a href="/product_models/<%=off.id%>">more</a></div>
 					</div>
 				<% end %>
 				</div>

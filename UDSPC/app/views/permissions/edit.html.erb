@@ -3,21 +3,61 @@
 <% form_for(@permission) do |f| %>
   <%= f.error_messages %>
 
-  <p>
+  <p>  	
     <%= f.label :PermissionType %><br />
-    <%= f.text_field :PermissionType %>
+    <%= f.select :PermissionType, [['Access', 'Access'], ['Modify', 'Modify']] %>
   </p>
   <p>
     <%= f.label :Page %><br />
-    <%= f.text_field :Page %>
+	<%= f.select :Page, 
+			[
+				'Jobs', 
+				'Applicants',
+				'Applications',
+				'Categories',
+				'Products',
+				'Product Models',
+				'Searching Key Words',
+				'Orders',
+				'Customers',
+				'Permissions',
+				'Users'
+			] 
+	%>
+  </p>
+  <p>
+    <%= f.label :URL %><br />
+	<%= f.select :url, 
+			[
+				['Jobs', '/job_oppertunities'], 
+				['Applicants','/applicants'],
+				['Applications','/applications'],
+				['Categories','/categories'],
+				['Products','/products'],
+				['Product Models','/product_models'],
+				['Searching Key Words','/keywords'],
+				['Orders','/orders'],
+				['Customers','/customers'],
+				['Permissions','/permissions'],
+				['Users','/users']
+			] 
+	%>
   </p>
   <p>
     <%= f.label :Module %><br />
-    <%= f.text_field :Module %>
+	<%= f.select :Module, 
+			[
+				['Administration', 'Admin'], 
+				['Human Resources','HR'],
+				['Orders Management','Orders'],
+				['Sales','Sales']
+			] 
+	%>
   </p>
   <p>
     <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
+	<%= f.select :user_id , User.find(:all , :order => "Name").collect { |c|
+		[c.Name , c.id]}%>
   </p>
   <p>
     <%= f.submit 'Update' %>
