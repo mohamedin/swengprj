@@ -33,6 +33,10 @@
   <%=h @order.ShippingCosts %>
 </p>
 
+<p>
+  <b>CustomerId:</b>
+  <%=h @order.customer_id %>
+</p>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
