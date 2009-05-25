@@ -32,6 +32,10 @@
     <%= f.text_field :ShippingCosts %>
   </p>
   <p>
+    <%= f.label :CustomerOrders %><br />
+    <%= f.text_field :customer_id %>
+  </p>
+  <p>
     <%= f.submit 'Update' %>
   </p>
 <% end %>

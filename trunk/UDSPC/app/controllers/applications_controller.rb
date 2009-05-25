@@ -84,4 +84,8 @@ class ApplicationsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def myApplications
+    @applications = Application.find(:all, :conditions => ["applicant_id = ?", params[:id]]);
+  end
 end

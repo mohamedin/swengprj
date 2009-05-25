@@ -84,4 +84,8 @@ class OrdersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def myOrders
+    @orders = Order.find(:all, :conditions => ["customer_id = ?", params[:id]]);
+  end
 end

@@ -1,4 +1,4 @@
-<h1>Listing orders</h1>
+<h1>My orders</h1>
 
 <table>
   <tr>
@@ -9,7 +9,6 @@
     <th>Paymentmethod</th>
     <th>Purchasenumber</th>
     <th>Shippingcosts</th>
-	<th>CustomerId</th>
   </tr>
 
 <% @orders.each do |order| %>
@@ -21,7 +20,6 @@
     <td><%=h order.PaymentMethod %></td>
     <td><%=h order.PurchaseNumber %></td>
     <td><%=h order.ShippingCosts %></td>
-    <td><%=h order.customer_id %></td>
     <td><%= link_to 'Show', order %></td>
     <td><%= link_to 'Edit', edit_order_path(order) %></td>
     <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
