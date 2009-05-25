@@ -3,18 +3,29 @@
 <% form_for(@application) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :applicant_id %><br />
-    <%= f.text_field :applicant_id %>
-  </p>
+  <% if params[:applicant_id] == nil %>
+  	<p>
+  	  <%= f.label :applicant_id %><br />
+ 	  <%= f.select :applicant_id , Applicant.find(:all , :order => "Name").collect { |c|	[c.Name , c.id]}%>
+  	</p>
+  <% else %>
+  	  <%= f.hidden_field :applicant_id, :value => params[:applicant_id] %>
+  <% end %>
+  
   <p>
     <%= f.label :job_oppertunity_id %><br />
-    <%= f.text_field :job_oppertunity_id %>
+	<%= f.select :job_oppertunity_id , JobOppertunity.find(:all , :order => "JobTitle").collect { |c|	[c.JobTitle , c.id]}%>
+
   </p>
-  <p>
-    <%= f.label :SendingDate %><br />
-    <%= f.datetime_select :SendingDate %>
-  </p>
+  <% if params[:applicant_id] == nil %>
+	  <p>
+	    <%= f.label :SendingDate %><br />
+	    <%= f.datetime_select :SendingDate %>
+	  </p>
+  <% else %>
+  	  <%= f.hidden_field :SendingDate, :value => Time.now() %>
+  <% end %>
+  
   <p>
     <%= f.submit 'Create' %>
   </p>

@@ -88,7 +88,8 @@
 				<% if session[:loggedApplicant] %>
 					<div class="title1" style="color:#ffffff; border-bottom:solid 1px #00deff; width:200px; padding-bottom:7px;">My Account</span></div>
 					<div class="date-text"><a href="/applicants/<%=session[:loggedApplicant].id%>">Profile</a></div>							
-					<div class="date-text"><a href="/applications/myApplications/<%=session[:loggedApplicant].id%>">Applications</a></div>
+					<div class="date-text"><a href="/applications/myApplications/<%=session[:loggedApplicant].id%>">Current Applications</a></div>
+					<div class="date-text"><a href="/applications/new?applicant_id=<%=session[:loggedApplicant].id%>">Apply for new Job</a></div>
 				<% end %>
 			</div>
 		</td>
