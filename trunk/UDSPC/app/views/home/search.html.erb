@@ -7,7 +7,8 @@
 		<li>
 			<a href="/product_models/<%=result.id%>"><%=result.Name %></a><br>
 			<b>Price:</b><%=result.Price%><br>
-			<b>Description:</b><br><%=result.Description%>			
+			<b>Description:</b><br><%=result.Description%><br>
+			<a href="/shopping_carts/create/<%=result.id%>">Add to cart</a>
 		</li>
 	<% end%>
 	</ul> 
