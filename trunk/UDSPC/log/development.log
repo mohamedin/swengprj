@@ -22973,3 +22973,1114 @@ C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_me
   [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
   [4;36;1mProduct Load (2.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
 Completed in 193ms (View: 94, DB: 14) | 200 OK [http://localhost/applications/new?applicant_id=1]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-05-26 02:03:35) [GET]
+  [4;36;1mCategory Load (56.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (0.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+  [4;36;1mProductModel Load (1.0ms)[0m   [0;1mSELECT * FROM product_models WHERE IsSpecialOffer='t' ORDER BY RANDOM() LIMIT 3[0m
+Rendering template within layouts/home
+Rendering home/index
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 3208ms (View: 187, DB: 60) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-05-26 02:04:02) [GET]
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (1.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+  [4;36;1mProductModel Load (2.0ms)[0m   [0;1mSELECT * FROM product_models WHERE IsSpecialOffer='t' ORDER BY RANDOM() LIMIT 3[0m
+Rendering template within layouts/home
+Rendering home/index
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 139ms (View: 101, DB: 6) | 200 OK [http://localhost/]
+
+
+Processing HomeController#search (for 127.0.0.1 at 2009-05-26 02:04:19) [GET]
+  Parameters: {"searchKey"=>"1"}
+  [4;36;1mCategory Load (4.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (2.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+  [4;36;1mProductModel Load (1.0ms)[0m   [0;1mSELECT * FROM product_models WHERE id IN(SELECT product_model_id FROM keywords WHERE lower(Word) like lower('%1%')) OR product_id IN(SELECT product_id FROM keywords WHERE lower(Word) like lower('%1%'))[0m
+Rendering template within layouts/home
+Rendering home/search
+  [4;35;1mProduct Load (2.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;35;1mProduct Load (2.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 194ms (View: 107, DB: 13) | 200 OK [http://localhost/home/search?searchKey=1]
+
+
+Processing HomeController#search (for 127.0.0.1 at 2009-05-26 02:04:28) [GET]
+  Parameters: {"searchKey"=>"pro"}
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (1.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+  [4;36;1mProductModel Load (2.0ms)[0m   [0;1mSELECT * FROM product_models WHERE id IN(SELECT product_model_id FROM keywords WHERE lower(Word) like lower('%pro%')) OR product_id IN(SELECT product_id FROM keywords WHERE lower(Word) like lower('%pro%'))[0m
+Rendering template within layouts/home
+Rendering home/search
+  [4;35;1mProduct Load (3.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;36;1mProduct Load (2.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 209ms (View: 119, DB: 12) | 200 OK [http://localhost/home/search?searchKey=pro]
+
+
+Processing ProductModelsController#show (for 127.0.0.1 at 2009-05-26 02:04:37) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (1.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+  [4;36;1mProductModel Load (1.0ms)[0m   [0;1mSELECT * FROM "product_models" WHERE ("product_models"."id" = 6) [0m
+Rendering template within layouts/home
+Rendering product_models/show
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 149ms (View: 89, DB: 8) | 200 OK [http://localhost/product_models/6]
+
+
+Processing ProductModelsController#edit (for 127.0.0.1 at 2009-05-26 02:04:42) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mCategory Load (2.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mJobOppertunity Load (1.0ms)[0m   [0;1mSELECT * FROM "job_oppertunities" [0m
+  [4;35;1mProductModel Load (2.0ms)[0m   [0mSELECT * FROM "product_models" WHERE ("product_models"."id" = 6) [0m
+Rendering template within layouts/home
+Rendering product_models/edit
+  [4;36;1mProduct Load (2.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 173ms (View: 105, DB: 11) | 200 OK [http://localhost/product_models/6/edit]
+
+
+Processing HomeController#contact (for 127.0.0.1 at 2009-05-26 02:04:58) [GET]
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (1.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Rendering template within layouts/home
+Rendering home/contact
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 97ms (View: 60, DB: 6) | 200 OK [http://localhost/home/contact]
+
+
+Processing HomeController#search (for 127.0.0.1 at 2009-05-26 02:05:04) [GET]
+  [4;35;1mCategory Load (2.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mJobOppertunity Load (1.0ms)[0m   [0;1mSELECT * FROM "job_oppertunities" [0m
+  [4;35;1mProductModel Load (4.0ms)[0m   [0mSELECT * FROM "product_models" [0m
+Rendering template within layouts/home
+Rendering home/search
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 129ms (View: 72, DB: 9) | 200 OK [http://localhost/home/search]
+
+
+Processing HomeController#about (for 127.0.0.1 at 2009-05-26 02:05:10) [GET]
+  [4;35;1mCategory Load (2.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mJobOppertunity Load (1.0ms)[0m   [0;1mSELECT * FROM "job_oppertunities" [0m
+Rendering template within layouts/home
+Rendering home/about
+  [4;35;1mProduct Load (2.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 95ms (View: 57, DB: 8) | 200 OK [http://localhost/home/about]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-05-26 02:05:18) [GET]
+  [4;36;1mCategory Load (3.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (2.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+  [4;36;1mProductModel Load (3.0ms)[0m   [0;1mSELECT * FROM product_models WHERE IsSpecialOffer='t' ORDER BY RANDOM() LIMIT 3[0m
+Rendering template within layouts/home
+Rendering home/index
+  [4;35;1mProduct Load (2.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;36;1mProduct Load (2.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 172ms (View: 99, DB: 13) | 200 OK [http://localhost/home]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-26 02:17:26) [GET]
+
+ActionController::RoutingError (No route matches "/upload/index" with {:method=>:get}):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-26 02:17:51) [GET]
+
+ActionController::RoutingError (No route matches "/upload" with {:method=>:get}):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing UploadController#index (for 127.0.0.1 at 2009-05-26 02:18:21) [GET]
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (0.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Rendering app\views\upload\uploadfile.rhtml
+
+ActionView::TemplateError (undefined method `start_form_tag' for #<ActionView::Base:0x66fa670>) on line #3 of app/views/upload/uploadfile.rhtml:
+1: <h1>File Upload</h1>
+2: <%= start_form_tag ({:action => 'uploadFile'}, 
+3:                         :multipart => true) %>
+4: <p><label for="upload_file">Select File</label> : 
+5: <%= file_field 'upload', 'datafile' %></p>
+6: <%= submit_tag "Upload" %>
+
+    /app\views\upload\uploadfile.rhtml:3:in `_run_rhtml_app47views47upload47uploadfile46rhtml'
+    app/controllers/upload_controller.rb:3:in `index'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (72.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UploadController#index (for 127.0.0.1 at 2009-05-26 02:21:05) [GET]
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (0.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Rendering app\views\upload\uploadfile.rhtml
+
+ActionView::TemplateError (undefined method `start_form_tag' for #<ActionView::Base:0x677cd00>) on line #3 of app/views/upload/uploadfile.rhtml:
+1: <h1>File Upload</h1>
+2: <%= form_tag 'uploadFile', :multipart => true do %>
+3: <p><label for="upload_file">Select File</label> : 
+4: <%= file_field 'upload', 'datafile' %></p>
+5: <%= submit_tag "Upload" %>
+6: <% end %>
+
+    /app\views\upload\uploadfile.rhtml:3:in `_run_rhtml_app47views47upload47uploadfile46rhtml'
+    app/controllers/upload_controller.rb:3:in `index'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (66.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UploadController#index (for 127.0.0.1 at 2009-05-26 02:21:13) [GET]
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (0.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Rendering app\views\upload\uploadfile.rhtml
+
+ActionView::TemplateError (undefined method `start_form_tag' for #<ActionView::Base:0x64bdbb4>) on line #3 of app/views/upload/uploadfile.rhtml:
+1: <h1>File Upload</h1>
+2: <%= form_tag 'uploadFile', :multipart => true do %>
+3: <p><label for="upload_file">Select File</label> : 
+4: <%= file_field 'upload', 'datafile' %></p>
+5: <%= submit_tag "Upload" %>
+6: <% end %>
+
+    /app\views\upload\uploadfile.rhtml:3:in `_run_rhtml_app47views47upload47uploadfile46rhtml'
+    app/controllers/upload_controller.rb:3:in `index'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (66.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UploadController#index (for 127.0.0.1 at 2009-05-26 02:21:55) [GET]
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (0.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Rendering app\views\upload\uploadfile.rhtml
+
+ActionView::TemplateError (undefined method `start_form_tag' for #<ActionView::Base:0x653a038>) on line #3 of app/views/upload/uploadfile.rhtml:
+1: <h1>File Upload</h1>
+2: <%= form_tag 'uploadFile', :multipart => true do %>
+3: <p><label for="upload_file">Select File</label> : 
+4: <%= file_field 'upload', 'datafile' %></p>
+5: <%= submit_tag "Upload" %>
+6: <% end %>
+
+    /app\views\upload\uploadfile.rhtml:3:in `_run_rhtml_app47views47upload47uploadfile46rhtml'
+    app/controllers/upload_controller.rb:3:in `index'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (70.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UploadController#index (for 127.0.0.1 at 2009-05-26 02:22:28) [GET]
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (1.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Rendering app\views\upload\uploadfile.rhtml
+
+ActionView::MissingTemplate (Missing template app\views\upload\uploadfile.rhtml in view path app/views):
+  app/controllers/upload_controller.rb:3:in `index'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UploadController#index (for 127.0.0.1 at 2009-05-26 02:22:42) [GET]
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (0.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+
+ActionView::MissingTemplate (Missing template upload/index.erb in view path app/views):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UploadController#index (for 127.0.0.1 at 2009-05-26 02:23:16) [GET]
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (0.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Rendering upload/index
+ERROR: compiling _run_erb_app47views47upload47index46html46erb RAISED compile error
+C:/Users/admin/Documents/Aptana Studio/UDSPC/app/views/upload/index.html.erb:2: syntax error, unexpected ')'
+@output_buffer.concat(( form_tag 'uploadFile', :multipart => true do ).to_s); @output_buffer.concat "\n"
+                                                                      ^
+C:/Users/admin/Documents/Aptana Studio/UDSPC/app/views/upload/index.html.erb:8: syntax error, unexpected kENSURE, expecting ')'
+C:/Users/admin/Documents/Aptana Studio/UDSPC/app/views/upload/index.html.erb:10: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47upload47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>File Upload</h1>\n"
+@output_buffer.concat(( form_tag 'uploadFile', :multipart => true do ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "<p><label for=\"upload_file\">Select File</label> : \n"
+@output_buffer.concat(( file_field 'upload', 'datafile' ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer.concat(( submit_tag "Upload" ).to_s); @output_buffer.concat "\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/admin/Documents/Aptana Studio/UDSPC/app/views/upload/index.html.erb:10:in `compile!'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/abstract_store.rb:122:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:46:in `service'
+c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:13:in `run'
+c:/ruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+C:/Users/admin/Documents/Aptana Studio/UDSPC/app/views/upload/index.html.erb:2: syntax error, unexpected ')'
+@output_buffer.concat(( form_tag 'uploadFile', :multipart => true do ).to_s); @output_buffer.concat "\n"
+                                                                      ^
+C:/Users/admin/Documents/Aptana Studio/UDSPC/app/views/upload/index.html.erb:8: syntax error, unexpected kENSURE, expecting ')'
+C:/Users/admin/Documents/Aptana Studio/UDSPC/app/views/upload/index.html.erb:10: syntax error, unexpected kEND, expecting ')') on line #2 of app/views/upload/index.html.erb:
+1: <h1>File Upload</h1>
+2: <%= form_tag 'uploadFile', :multipart => true do %>
+3: <p><label for="upload_file">Select File</label> : 
+4: <%= file_field 'upload', 'datafile' %></p>
+5: <%= submit_tag "Upload" %>
+
+    app/views/upload/index.html.erb:10:in `compile!'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (64.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UploadController#index (for 127.0.0.1 at 2009-05-26 02:23:54) [GET]
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (0.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Rendering upload/index
+Completed in 32ms (View: 9, DB: 2) | 200 OK [http://localhost/upload]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-26 02:24:00) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"XrQAYVCNajvZUr92abpQ5lU1WBxkfuM/TSRNJo/8OA0=", "upload"=>{"datafile"=>#<File:C:/Users/admin/AppData/Local/Temp/RackMultipart.3516.1>}}
+
+ActionController::RoutingError (No route matches "/uploadFile" with {:method=>:post}):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-26 02:24:28) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"XrQAYVCNajvZUr92abpQ5lU1WBxkfuM/TSRNJo/8OA0=", "upload"=>{"datafile"=>#<File:C:/Users/admin/AppData/Local/Temp/RackMultipart.3516.3>}}
+
+ActionController::RoutingError (No route matches "/uploadFile" with {:method=>:post}):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-26 02:24:37) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"XrQAYVCNajvZUr92abpQ5lU1WBxkfuM/TSRNJo/8OA0=", "upload"=>{"datafile"=>#<File:C:/Users/admin/AppData/Local/Temp/RackMultipart.3516.5>}}
+
+ActionController::RoutingError (No route matches "/uploadFile" with {:method=>:post}):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing UploadController#index (for 127.0.0.1 at 2009-05-26 02:24:40) [GET]
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (1.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Rendering upload/index
+Completed in 30ms (View: 9, DB: 2) | 200 OK [http://localhost/upload]
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2009-05-26 02:24:45) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"XrQAYVCNajvZUr92abpQ5lU1WBxkfuM/TSRNJo/8OA0=", "upload"=>{"datafile"=>#<File:C:/Users/admin/AppData/Local/Temp/RackMultipart.3516.0>}}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (0.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `sanitize_filename' for DataFile(Table doesn't exist):Class):
+  app/models/data_file.rb:3:in `save'
+  app/controllers/upload_controller.rb:6:in `uploadFile'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (54.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2009-05-26 02:26:19) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"XrQAYVCNajvZUr92abpQ5lU1WBxkfuM/TSRNJo/8OA0=", "upload"=>{"datafile"=>#<File:C:/Users/admin/AppData/Local/Temp/RackMultipart.3516.2>}}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mJobOppertunity Load (1.0ms)[0m   [0;1mSELECT * FROM "job_oppertunities" [0m
+Completed in 41ms (View: 2, DB: 3) | 200 OK [http://localhost/upload/uploadFile]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-26 02:27:19) [GET]
+
+ActionController::RoutingError (No route matches "/data/.sub(/%5B%5E%5Cw%5C.%5C-%5D/,%27_%27)" with {:method=>:get}):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProductModelsController#index (for 127.0.0.1 at 2009-05-26 12:07:50) [GET]
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mJobOppertunity Load (1.0ms)[0m   [0;1mSELECT * FROM "job_oppertunities" [0m
+  [4;35;1mProductModel Load (2.0ms)[0m   [0mSELECT * FROM "product_models" [0m
+Rendering template within layouts/home
+Rendering product_models/index
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 3) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 2) [0m
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 131ms (View: 91, DB: 6) | 200 OK [http://localhost/product_models]
+
+
+Processing ProductModelsController#edit (for 127.0.0.1 at 2009-05-26 12:07:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mCategory Load (2.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mJobOppertunity Load (1.0ms)[0m   [0;1mSELECT * FROM "job_oppertunities" [0m
+  [4;35;1mProductModel Load (1.0ms)[0m   [0mSELECT * FROM "product_models" WHERE ("product_models"."id" = 1) [0m
+Rendering template within layouts/home
+Rendering product_models/edit
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 80ms (View: 40, DB: 7) | 200 OK [http://localhost/product_models/1/edit]
+
+
+Processing ProductModelsController#index (for 127.0.0.1 at 2009-05-26 12:10:23) [GET]
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (1.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+  [4;36;1mProductModel Load (2.0ms)[0m   [0;1mSELECT * FROM "product_models" [0m
+Rendering template within layouts/home
+Rendering product_models/index
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 3) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 2) [0m
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 86ms (View: 47, DB: 6) | 200 OK [http://localhost/product_models]
+
+
+Processing ProductModelsController#new (for 127.0.0.1 at 2009-05-26 12:10:28) [GET]
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (0.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Rendering template within layouts/home
+Rendering product_models/new
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 91ms (View: 55, DB: 5) | 200 OK [http://localhost/product_models/new]
+
+
+Processing ProductModelsController#new (for 127.0.0.1 at 2009-05-26 12:10:51) [GET]
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (1.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Rendering template within layouts/home
+Rendering product_models/new
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 92ms (View: 53, DB: 6) | 200 OK [http://localhost/product_models/new]
+
+
+Processing ProductModelsController#new (for 127.0.0.1 at 2009-05-26 12:14:16) [GET]
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (0.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Rendering template within layouts/home
+Rendering product_models/new
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 157ms (View: 54, DB: 3) | 200 OK [http://localhost/product_models/new]
+
+
+Processing ProductModelsController#new (for 127.0.0.1 at 2009-05-26 12:15:28) [GET]
+  [4;36;1mCategory Load (3.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (1.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Rendering template within layouts/home
+Rendering product_models/new
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 93ms (View: 53, DB: 7) | 200 OK [http://localhost/product_models/new]
+
+
+Processing ProductModelsController#upload (for 127.0.0.1 at 2009-05-26 12:15:33) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"XrQAYVCNajvZUr92abpQ5lU1WBxkfuM/TSRNJo/8OA0=", "id"=>"uploadFile", "upload"=>{"datafile"=>#<File:C:/Users/admin/AppData/Local/Temp/RackMultipart.3516.3>}}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (2.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+
+ActionController::UnknownAction (No action responded to upload. Actions: create, destroy, edit, index, initNavigator, new, show, and update):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ProductModelsController#new (for 127.0.0.1 at 2009-05-26 12:16:18) [GET]
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (1.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Rendering template within layouts/home
+Rendering product_models/new
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 88ms (View: 51, DB: 5) | 200 OK [http://localhost/product_models/new]
+
+
+Processing ProductModelsController#new (for 127.0.0.1 at 2009-05-26 12:16:24) [GET]
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (1.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Rendering template within layouts/home
+Rendering product_models/new
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 110ms (View: 61, DB: 7) | 200 OK [http://localhost/product_models/new]
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2009-05-26 12:16:29) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"XrQAYVCNajvZUr92abpQ5lU1WBxkfuM/TSRNJo/8OA0=", "upload"=>{"datafile"=>#<File:C:/Users/admin/AppData/Local/Temp/RackMultipart.3516.1>}}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (1.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Completed in 40ms (View: 3, DB: 2) | 200 OK [http://localhost/upload/uploadFile]
+
+
+Processing ProductModelsController#new (for 127.0.0.1 at 2009-05-26 12:17:59) [GET]
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (0.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Rendering template within layouts/home
+Rendering product_models/new
+  [4;36;1mProduct Load (2.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 90ms (View: 51, DB: 7) | 200 OK [http://localhost/product_models/new]
+
+
+Processing ProductModelsController#show to ImageURL (for 127.0.0.1 at 2009-05-26 12:18:00) [GET]
+  Parameters: {"id"=>"@product_model"}
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (1.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+  [4;36;1mProductModel Load (0.0ms)[0m   [0;1mSELECT * FROM "product_models" WHERE ("product_models"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find ProductModel with ID=@product_model):
+  app/controllers/product_models_controller.rb:18:in `show'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (87.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ProductModelsController#show to ImageURL (for 127.0.0.1 at 2009-05-26 12:18:04) [GET]
+  Parameters: {"id"=>"@product_model"}
+  [4;35;1mCategory Load (2.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mJobOppertunity Load (0.0ms)[0m   [0;1mSELECT * FROM "job_oppertunities" [0m
+  [4;35;1mProductModel Load (0.0ms)[0m   [0mSELECT * FROM "product_models" WHERE ("product_models"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find ProductModel with ID=@product_model):
+  app/controllers/product_models_controller.rb:18:in `show'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (89.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ProductModelsController#new (for 127.0.0.1 at 2009-05-26 12:21:56) [GET]
+  [4;36;1mCategory Load (2.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (1.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Rendering template within layouts/home
+Rendering product_models/new
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 90ms (View: 53, DB: 5) | 200 OK [http://localhost/product_models/new]
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2009-05-26 12:22:08) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"XrQAYVCNajvZUr92abpQ5lU1WBxkfuM/TSRNJo/8OA0=", "upload"=>{"datafile"=>#<File:C:/Users/admin/AppData/Local/Temp/RackMultipart.3516.1>}}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (1.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Completed in 41ms (View: 3, DB: 2) | 200 OK [http://localhost/upload/uploadFile]
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2009-05-26 12:23:05) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"XrQAYVCNajvZUr92abpQ5lU1WBxkfuM/TSRNJo/8OA0=", "upload"=>{"datafile"=>#<File:C:/Users/admin/AppData/Local/Temp/RackMultipart.3516.3>}}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (1.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Completed in 36ms (View: 3, DB: 3) | 200 OK [http://localhost/upload/uploadFile]
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2009-05-26 12:23:17) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"XrQAYVCNajvZUr92abpQ5lU1WBxkfuM/TSRNJo/8OA0=", "upload"=>{"datafile"=>#<File:C:/Users/admin/AppData/Local/Temp/RackMultipart.3516.1>}}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (1.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Completed in 44ms (View: 3, DB: 3) | 200 OK [http://localhost/upload/uploadFile]
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2009-05-26 12:23:28) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"XrQAYVCNajvZUr92abpQ5lU1WBxkfuM/TSRNJo/8OA0=", "upload"=>{"datafile"=>#<File:C:/Users/admin/AppData/Local/Temp/RackMultipart.3516.3>}}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (0.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Completed in 42ms (View: 3, DB: 3) | 200 OK [http://localhost/upload/uploadFile]
+
+
+Processing ProductModelsController#new (for 127.0.0.1 at 2009-05-26 12:25:49) [GET]
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (1.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Rendering template within layouts/home
+Rendering product_models/new
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 91ms (View: 53, DB: 6) | 200 OK [http://localhost/product_models/new]
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2009-05-26 12:25:54) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"XrQAYVCNajvZUr92abpQ5lU1WBxkfuM/TSRNJo/8OA0=", "upload"=>{"datafile"=>#<File:C:/Users/admin/AppData/Local/Temp/RackMultipart.3516.1>}}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (1.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Completed in 44ms (View: 3, DB: 3) | 200 OK [http://localhost/upload/uploadFile]
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2009-05-26 12:27:18) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"XrQAYVCNajvZUr92abpQ5lU1WBxkfuM/TSRNJo/8OA0=", "upload"=>{"datafile"=>#<File:C:/Users/admin/AppData/Local/Temp/RackMultipart.3516.0>}}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (0.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+Completed in 44ms (View: 3, DB: 2) | 200 OK [http://localhost/upload/uploadFile]
+
+
+Processing ProductModelsController#create (for 127.0.0.1 at 2009-05-26 12:30:03) [POST]
+  Parameters: {"commit"=>"Create", "product_model"=>{"Features"=>"6546", "Rate"=>"", "Name"=>"fgdf", "Size"=>"", "ImageURL"=>"http://localhost:3002/data/_45581017____001.jpg", "IsSpecialOffer"=>"0", "Serial"=>"fdg", "QuantityOnHand"=>"", "product_id"=>"4", "Discount"=>"", "RelatedDocumentURL"=>"", "SalesPackageContent"=>"", "Price"=>"45645", "ReorderPoint"=>"", "Description"=>"654"}, "authenticity_token"=>"XrQAYVCNajvZUr92abpQ5lU1WBxkfuM/TSRNJo/8OA0="}
+  [4;36;1mCategory Load (0.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (0.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+  [4;36;1mProductModel Create (1.0ms)[0m   [0;1mINSERT INTO "product_models" ("Name", "Rate", "Features", "Size", "updated_at", "Serial", "IsSpecialOffer", "ImageURL", "QuantityOnHand", "product_id", "Discount", "Price", "SalesPackageContent", "RelatedDocumentURL", "Description", "ReorderPoint", "created_at") VALUES('fgdf', NULL, '6546', '', '2009-05-26 09:30:03', 0, 'f', 'http://localhost:3002/data/_45581017____001.jpg', NULL, 4, NULL, 45645, '', '', '654', NULL, '2009-05-26 09:30:03')[0m
+Redirected to http://localhost:3002/product_models/8
+Completed in 51ms (DB: 2) | 302 Found [http://localhost/product_models]
+
+
+Processing ProductModelsController#show (for 127.0.0.1 at 2009-05-26 12:30:03) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mJobOppertunity Load (0.0ms)[0m   [0;1mSELECT * FROM "job_oppertunities" [0m
+  [4;35;1mProductModel Load (1.0ms)[0m   [0mSELECT * FROM "product_models" WHERE ("product_models"."id" = 8) [0m
+Rendering template within layouts/home
+Rendering product_models/show
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 4) [0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 81ms (View: 42, DB: 5) | 200 OK [http://localhost/product_models/8]
+
+
+Processing ProductModelsController#edit (for 127.0.0.1 at 2009-05-26 12:32:02) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mCategory Load (1.0ms)[0m   [0;1mSELECT * FROM "categories" [0m
+  [4;35;1mJobOppertunity Load (0.0ms)[0m   [0mSELECT * FROM "job_oppertunities" [0m
+  [4;36;1mProductModel Load (1.0ms)[0m   [0;1mSELECT * FROM "product_models" WHERE ("product_models"."id" = 8) [0m
+Rendering template within layouts/home
+Rendering product_models/edit
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM "products" ORDER BY Name[0m
+Exception occurred during reader method compilation.
+Maybe updated
+_at is not a valid Ruby identifier?
+compile error
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected tIDENTIFIER, expecting ')'
+_at, time)
+   ^
+c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/attribute_methods.rb:218: syntax error, unexpected ')', expecting '='
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 1) [0m
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products".category_id = 2) [0m
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products".category_id = 3) [0m
+Completed in 93ms (View: 56, DB: 4) | 200 OK [http://localhost/product_models/8/edit]
+
+
+Processing UploadController#uploadFile (for 127.0.0.1 at 2009-05-26 12:32:18) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"XrQAYVCNajvZUr92abpQ5lU1WBxkfuM/TSRNJo/8OA0=", "upload"=>{"datafile"=>#<File:C:/Users/admin/AppData/Local/Temp/RackMultipart.3516.1>}}
+  [4;35;1mCategory Load (0.0ms)[0m   [0mSELECT * FROM "categories" [0m
+  [4;36;1mJobOppertunity Load (1.0ms)[0m   [0;1mSELECT * FROM "job_oppertunities" [0m
+Completed in 37ms (View: 3, DB: 2) | 200 OK [http://localhost/upload/uploadFile]

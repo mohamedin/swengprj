@@ -1,5 +1,12 @@
 <h1>Editing Product Model</h1>
-
+<script>
+	function uploadDone(){
+		document.getElementById('product_model_ImageURL').value = document.getElementById('uploadedImg').src;
+	}
+	
+</script>
+<table border="0">
+<tr><td>
 <% form_for(@product_model) do |f| %>
   <%= f.error_messages %>
 
@@ -68,6 +75,22 @@
     <%= f.submit 'Update' %>
   </p>
 <% end %>
+</td>
+<td valign="top">
+	
+	<img id="uploadedImg"  <% if @product_model.ImageURL%>src="<%=@product_model.ImageURL%>" <%else%>style="display:none" <%end%>>
+	
+	<% form_tag '/upload/uploadFile', :multipart => true, :target => "imgIFream" do %>
+		<p><label for="upload_file">Select Image</label> : 
+		<%= file_field 'upload', 'datafile' %></p>
+		<%= submit_tag "Upload" %>
+	<% end %>
+	<iframe id="imgIFream" name="imgIFream" style="display:none" >
+		
+	</iframe>
+</td>
+<tr>
+</table>
 
 <%= link_to 'Show', @product_model %> |
 <%= link_to 'Back', product_models_path %>

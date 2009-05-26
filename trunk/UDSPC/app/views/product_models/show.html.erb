@@ -1,3 +1,6 @@
+<table border="0">
+	<tr>
+		<td>
 <p>
   <b>Product:</b>
   <%=h @product_model.product.Name %>
@@ -43,10 +46,6 @@
   <%=h @product_model.Features %>
 </p>
 
-<p>
-  <b>Imageurl:</b>
-  <%=h @product_model.ImageURL %>
-</p>
 
 <p>
   <b>Quantityonhand:</b>
@@ -72,6 +71,14 @@
   <b>Relateddocumenturl:</b>
   <%=h @product_model.RelatedDocumentURL %>
 </p>
+</td>
+<td valign="top">
+  <%if @product_model.ImageURL %>
+  	<img src=<%=@product_model.ImageURL %>>
+  <%end%>
 
+</td>
+</tr>
+</table>
 <%= link_to 'Edit', edit_product_model_path(@product_model) %> |
 <%= link_to 'Back', product_models_path %>
