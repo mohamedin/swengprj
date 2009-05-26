@@ -25,6 +25,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :categories
   
+  map.resources :upload
+  
   #map.connect 'shopping_carts/update' , :controller => 'shopping_carts', :action => 'update'
   #map.resources :shopping_carts
 
