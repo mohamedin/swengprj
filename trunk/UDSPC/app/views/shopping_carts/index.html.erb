@@ -7,16 +7,18 @@
 			<td>Price</td>
 			<td>Taxes</td>
 			<td>Total Price</td>
+			<td><a href="/shopping_carts/delete?all=1">Remove all</a></td>
 	  	</tr>
 		<% c = 0%>
 		<% for product in @cart%>
 			<tr>
 				<td><%=h product.product_model.Name%></td>
 				<td><input type="text" value="<%=product.Quantity%>" name="item_<%=c%>"></td>
-				<%c=c+1%>
 				<td><%= product.ItemPrice%></td>
 				<td><%= product.Taxs%></td>
 				<td><%= product.ItemPrice*product.Quantity*(1+product.Taxs) %></td>
+				<td><a href="/shopping_carts/delete?i=<%=c%>">Remove</a></td>
+				<%c=c+1%>
 			</tr>
 		<%end%>
 	  </table>

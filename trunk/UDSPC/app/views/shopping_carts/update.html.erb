@@ -1,1 +1,11 @@
-Check out shipping details goes here
+<%if session[:loggedCustomer]%>
+	
+<%else%>
+<br>
+<center>
+	Please <a href="/">sign in</a> first to continue with check out
+	<br>
+	If you are not register yet.<a href="/customers/new">Sign up</a> please
+
+</center>
+<%end%>

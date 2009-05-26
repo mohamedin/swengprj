@@ -1,6 +1,6 @@
 class CustomersController < ApplicationController
   layout 'home'
-  
+  before_filter :authenticate, :except => [:new, :edit]
   # GET /customers
   # GET /customers.xml
   def index
@@ -36,7 +36,11 @@ class CustomersController < ApplicationController
 
   # GET /customers/1/edit
   def edit
-    @customer = Customer.find(params[:id])
+    if session[:loggedUser] || session[:loggedCustomer].id == params[:id].to_i
+        @customer = Customer.find(params[:id])
+    else
+      redirect_to :controller=>:home,:action => :index
+    end
   end
 
   # POST /customers
@@ -84,4 +88,14 @@ class CustomersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  private
+
+  def authenticate
+
+    unless session[:loggedUser]
+      redirect_to :controller=>:home,:action => :index
+    end
+  end
+
 end
