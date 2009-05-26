@@ -1,11 +1,11 @@
 <p>
   <b>Applicant:</b>
-  <%=h @application.applicant_id %>
+  <%=h @application.applicant.Name %>
 </p>
 
 <p>
-  <b>Job oppertunity:</b>
-  <%=h @application.job_oppertunity_id %>
+  <b>Job Oppertunity:</b>
+  <%=h @application.job_oppertunity.JobTitle %>
 </p>
 
 <p>
@@ -14,5 +14,4 @@
 </p>
 
 
-<%= link_to 'Edit', edit_application_path(@application) %> |
 <%= link_to 'Back', applications_path %>

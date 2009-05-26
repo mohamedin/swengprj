@@ -1,22 +1,19 @@
-<h1>My applications</h1>
+<h1>My Applications</h1>
 
 <table>
   <tr>
-    <th>Job oppertunity</th>
-    <th>Sendingdate</th>
+    <th>Job Oppertunity</th>
+    <th>Sending Date</th>
   </tr>
 
 <% @applications.each do |application| %>
   <tr>
-    <td><%=h application.job_oppertunity_id %></td>
+    <td><%=h application.job_oppertunity.JobTitle %></td>
     <td><%=h application.SendingDate %></td>
     <td><%= link_to 'Show', application %></td>
-    <td><%= link_to 'Edit', edit_application_path(application) %></td>
     <td><%= link_to 'Destroy', application, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New application', new_application_path %>

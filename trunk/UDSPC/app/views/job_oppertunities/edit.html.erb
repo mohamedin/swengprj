@@ -1,4 +1,4 @@
-<h1>Editing job_oppertunity</h1>
+<h1>Editing Job Oppertunity</h1>
 
 <% form_for(@job_oppertunity) do |f| %>
   <%= f.error_messages %>
@@ -23,10 +23,10 @@
     <%= f.label :Prequisites %><br />
     <%= f.text_area :Prequisites %>
   </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
+  <% if session[:loggedUser] != nil %>
+	  <p>
+	    <%= f.submit 'Update' %>
+	  </p>
+  <% end %>
 <% end %>
-
-<%= link_to 'Show', @job_oppertunity %> |
-<%= link_to 'Back', job_oppertunities_path %>
+<%= link_to 'Show', @job_oppertunity %> | <%= link_to 'Back', job_oppertunities_path %>
