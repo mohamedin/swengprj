@@ -34,4 +34,16 @@ class ShoppingCartsController < ApplicationController
       redirect_to :controller => 'home', :action => :index
     end
   end
+  def delete
+    if params["all"]
+      session[:cart] = nil
+    elsif params["i"]
+      session[:cart].slice!(params["i"].to_i)
+      if session[:cart].length == 0 
+        session[:cart] = nil
+      end
+    end
+    
+    redirect_to :action => :index
+  end
 end

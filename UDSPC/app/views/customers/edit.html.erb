@@ -25,7 +25,7 @@
   </p>
   <p>
     <%= f.label :Password %><br />
-    <%= f.text_field :Password %>
+    <%= f.password_field :Password %>
   </p>
   <p>
     <%= f.label :BillingAddress %><br />
@@ -67,6 +67,7 @@
     <%= f.submit 'Update' %>
   </p>
 <% end %>
-
-<%= link_to 'Show', @customer %> |
-<%= link_to 'Back', customers_path %>
+<%if session[:loggedUser]%>
+	<%= link_to 'Show', @customer %> |
+	<%= link_to 'Back', customers_path %>
+<%end%>
