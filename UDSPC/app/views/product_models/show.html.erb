@@ -81,4 +81,5 @@
 </tr>
 </table>
 <%= link_to 'Edit', edit_product_model_path(@product_model) %> |
-<%= link_to 'Back', product_models_path %>
+<%= link_to 'Back', product_models_path %> | 
+<a href="/shopping_carts/create/<%=@product_model.id%>">Add to cart</a>
