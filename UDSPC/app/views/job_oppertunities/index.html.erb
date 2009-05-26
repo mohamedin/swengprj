@@ -1,8 +1,8 @@
-<h1>Listing job_oppertunities</h1>
+<h1>Listing Avaliable Jobs</h1>
 
 <table>
   <tr>
-    <th>Jobtitle</th>
+    <th>Job Title</th>
     <th>Salary</th>
     <th>Department</th>
     <th>Description</th>
@@ -16,13 +16,16 @@
     <td><%=h job_oppertunity.Department %></td>
     <td><%=h job_oppertunity.Description %></td>
     <td><%=h job_oppertunity.Prequisites %></td>
-    <td><%= link_to 'Show', job_oppertunity %></td>
-    <td><%= link_to 'Edit', edit_job_oppertunity_path(job_oppertunity) %></td>
-    <td><%= link_to 'Destroy', job_oppertunity, :confirm => 'Are you sure?', :method => :delete %></td>
+	<td><%= link_to 'Show', job_oppertunity %></td>
+	<% if session[:loggedUser] != nil %>
+	    <td><%= link_to 'Edit', edit_job_oppertunity_path(job_oppertunity) %></td>
+	    <td><%= link_to 'Destroy', job_oppertunity, :confirm => 'Are you sure?', :method => :delete %></td>
+	<% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New job_oppertunity', new_job_oppertunity_path %>
+<% if session[:loggedUser] != nil %>
+	<%= link_to 'New Job Oppertunity', new_job_oppertunity_path %>
+<% end %>

@@ -1,5 +1,5 @@
 <p>
-  <b>Jobtitle:</b>
+  <b>Job Title:</b>
   <%=h @job_oppertunity.JobTitle %>
 </p>
 
@@ -23,6 +23,7 @@
   <%=h @job_oppertunity.Prequisites %>
 </p>
 
-
-<%= link_to 'Edit', edit_job_oppertunity_path(@job_oppertunity) %> |
+<% if session[:loggedUser] != nil %>
+	<%= link_to 'Edit', edit_job_oppertunity_path(@job_oppertunity) %> | 
+<% end %>
 <%= link_to 'Back', job_oppertunities_path %>
