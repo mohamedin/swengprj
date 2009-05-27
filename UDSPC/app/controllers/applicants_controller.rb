@@ -1,6 +1,6 @@
 class ApplicantsController < ApplicationController
   layout 'home'
-  
+  before_filter :authenticate, :except => [:new]
   # GET /applicants
   # GET /applicants.xml
   def index

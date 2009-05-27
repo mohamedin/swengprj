@@ -46,4 +46,26 @@ class ShoppingCartsController < ApplicationController
     
     redirect_to :action => :index
   end
+  
+  def confirm
+    tp = 0
+    for product in session[:cart]
+      tp =tp + product.ItemPrice*product.Quantity*(1+product.Taxs)
+    end
+    order = Order.new
+    order.OrderDate = Time.now
+    order.OrderStatus = 0
+    order.TotalPrice = tp
+    order.PaymentMethod = 0
+    order.PurchaseNumber = rand(1000000)
+    order.ShippingCosts = 10 * session[:cart].length
+    order.customer_id = session[:loggedCustomer].id
+    order.save
+    
+    for product in session[:cart]
+      product.order_id = order.id
+      product.save
+    end
+    session[:cart] = nil
+  end
 end

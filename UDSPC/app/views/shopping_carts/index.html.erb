@@ -10,17 +10,28 @@
 			<td><a href="/shopping_carts/delete?all=1">Remove all</a></td>
 	  	</tr>
 		<% c = 0%>
+		<% tp = 0%>
 		<% for product in @cart%>
 			<tr>
 				<td><%=h product.product_model.Name%></td>
 				<td><input type="text" value="<%=product.Quantity%>" name="item_<%=c%>"></td>
 				<td><%= product.ItemPrice%></td>
 				<td><%= product.Taxs%></td>
-				<td><%= product.ItemPrice*product.Quantity*(1+product.Taxs) %></td>
+				<% iprice = product.ItemPrice*product.Quantity*(1+product.Taxs) %>
+				<td><%= iprice %></td>
+				<%tp=tp+iprice%>				
 				<td><a href="/shopping_carts/delete?i=<%=c%>">Remove</a></td>
 				<%c=c+1%>
 			</tr>
 		<%end%>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><b>Total Price</b></td>
+				<td><b><%= tp %></b></td>
+				<td></td>
+			</tr>
 	  </table>
 	  <%= submit_tag "Check out" %> 
 	  <%= submit_tag "Update & Continue shopping" %>

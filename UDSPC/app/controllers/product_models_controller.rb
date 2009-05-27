@@ -1,6 +1,7 @@
 class ProductModelsController < ApplicationController
-  layout 'home'
   
+  layout 'home'
+  before_filter :authenticate, :except => [:show]
   # GET /product_models
   # GET /product_models.xml
   def index
