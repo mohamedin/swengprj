@@ -1,40 +1,30 @@
 <p>
-  <b>Orderdate:</b>
+  <b>Order date:</b>
   <%=h @order.OrderDate %>
 </p>
 
 <p>
-  <b>Confimationnumber:</b>
-  <%=h @order.ConfimationNumber %>
+  <b>Order status:</b>
+  <%=h @order.getStatusDesc() %>
 </p>
 
 <p>
-  <b>Orderstatus:</b>
-  <%=h @order.OrderStatus %>
-</p>
-
-<p>
-  <b>Totalprice:</b>
+  <b>Total price:</b>
   <%=h @order.TotalPrice %>
 </p>
 
 <p>
-  <b>Paymentmethod:</b>
-  <%=h @order.PaymentMethod %>
-</p>
-
-<p>
-  <b>Purchasenumber:</b>
+  <b>Purchase number:</b>
   <%=h @order.PurchaseNumber %>
 </p>
 
 <p>
-  <b>Shippingcosts:</b>
+  <b>Shipping costs:</b>
   <%=h @order.ShippingCosts %>
 </p>
 
 <p>
-  <b>CustomerId:</b>
+  <b>Customer Id:</b>
   <%=h @order.customer_id %>
 </p>
 

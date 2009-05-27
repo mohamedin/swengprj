@@ -4,24 +4,12 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :OrderDate %><br />
-    <%= f.datetime_select :OrderDate %>
-  </p>
-  <p>
-    <%= f.label :ConfimationNumber %><br />
-    <%= f.text_field :ConfimationNumber %>
-  </p>
-  <p>
     <%= f.label :OrderStatus %><br />
-    <%= f.text_field :OrderStatus %>
+	<%= f.select :OrderStatus , @order.getStatuses%>
   </p>
   <p>
     <%= f.label :TotalPrice %><br />
     <%= f.text_field :TotalPrice %>
-  </p>
-  <p>
-    <%= f.label :PaymentMethod %><br />
-    <%= f.text_field :PaymentMethod %>
   </p>
   <p>
     <%= f.label :PurchaseNumber %><br />
@@ -32,7 +20,7 @@
     <%= f.text_field :ShippingCosts %>
   </p>
   <p>
-    <%= f.label :CustomerOrders %><br />
+    <%= f.label :Customer %><br />
     <%= f.text_field :customer_id %>
   </p>
   <p>

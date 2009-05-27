@@ -16,5 +16,15 @@ class ApplicationController < ActionController::Base
      if session[:loggedUser]
        @permissions = Permission.find(:all, :conditions => ["user_id = ?", session[:loggedUser].id]);
      end
+ end
+ 
+   protected
+
+  def authenticate
+
+    unless session[:loggedUser]
+      redirect_to :controller=>:home,:action => :index
+    end
   end
+
 end

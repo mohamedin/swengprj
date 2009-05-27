@@ -80,6 +80,8 @@
 </td>
 </tr>
 </table>
+<%if session[:loggedUser]%>
 <%= link_to 'Edit', edit_product_model_path(@product_model) %> |
 <%= link_to 'Back', product_models_path %> | 
+<%end%>
 <a href="/shopping_carts/create/<%=@product_model.id%>">Add to cart</a>

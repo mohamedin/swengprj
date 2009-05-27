@@ -13,7 +13,7 @@
   </p>
   <p>
     <%= f.label :OrderStatus %><br />
-    <%= f.text_field :OrderStatus %>
+    <%= f.select :OrderStatus , @order.getStatuses%>
   </p>
   <p>
     <%= f.label :TotalPrice %><br />
@@ -32,7 +32,7 @@
     <%= f.text_field :ShippingCosts %>
   </p>
   <p>
-    <%= f.label :CustomerOrders %><br />
+    <%= f.label :Customer %><br />
     <%= f.text_field :customer_id %>
   </p>
   <p>

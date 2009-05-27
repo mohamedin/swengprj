@@ -89,13 +89,4 @@ class CustomersController < ApplicationController
     end
   end
   
-  private
-
-  def authenticate
-
-    unless session[:loggedUser]
-      redirect_to :controller=>:home,:action => :index
-    end
-  end
-
 end

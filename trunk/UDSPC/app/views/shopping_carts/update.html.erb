@@ -1,5 +1,53 @@
 <%if session[:loggedCustomer]%>
+	<h2>Order Summery</h2>
+		  <table border="0">
+	  	<tr>
+	  		<td>Product</td>
+			<td>Quantity</td>
+			<td>Price</td>
+			<td>Taxes</td>
+			<td>Total Price</td>
+	  	</tr>
+		<% tp = 0%>
+		<% for product in @cart%>
+			<tr>
+				<td><%=h product.product_model.Name%></td>
+				<td><%=product.Quantity%></td>
+				<td><%= product.ItemPrice%></td>
+				<td><%= product.Taxs%></td>
+				<% iprice = product.ItemPrice*product.Quantity*(1+product.Taxs) %>
+				<td><%= iprice %></td>
+				<%tp=tp+iprice%>
+			</tr>
+		<%end%>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>Shipping Price</td>
+				<td><%= 10 * @cart.length %></td>
+			</tr>		
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><b>Total Price</b></td>
+				<td><b><%= tp + 10 * @cart.length%></b></td>
+			</tr>
+	  </table>
+	<h3>Shipping information</h3>
+	<%=h session[:loggedCustomer].ShippingAddress%><br>
+	<a href="/customers/edit/<%=session[:loggedCustomer].id%>">Change</a>
+	<h3>Billing information</h3>
+	<div>Credit Card Number: <%=session[:loggedCustomer].CreditNumber%></div>
+	<div>Address: <%=h session[:loggedCustomer].BillingAddress%></div>
 	
+	<a href="/customers/edit/<%=session[:loggedCustomer].id%>">Change</a>
+	<br>
+	<br>
+	<center>
+		<a href="/shopping_carts/confirm">Confirm & continue</a>
+	</center>
 <%else%>
 <br>
 <center>

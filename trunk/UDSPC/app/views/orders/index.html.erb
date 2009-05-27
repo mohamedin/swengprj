@@ -2,26 +2,22 @@
 
 <table>
   <tr>
-    <th>Orderdate</th>
-    <th>Confimationnumber</th>
-    <th>Orderstatus</th>
-    <th>Totalprice</th>
-    <th>Paymentmethod</th>
-    <th>Purchasenumber</th>
-    <th>Shippingcosts</th>
-	<th>CustomerId</th>
+    <th nowrap>Order date</th>
+    <th nowrap>Order status</th>
+    <th nowrap>Total price</th>
+    <th nowrap>Purchase number</th>
+    <th nowrap>Shipping costs</th>
+	<th nowrap>Customer Id</th>
   </tr>
 
 <% @orders.each do |order| %>
   <tr>
-    <td><%=h order.OrderDate %></td>
-    <td><%=h order.ConfimationNumber %></td>
-    <td><%=h order.OrderStatus %></td>
-    <td><%=h order.TotalPrice %></td>
-    <td><%=h order.PaymentMethod %></td>
-    <td><%=h order.PurchaseNumber %></td>
-    <td><%=h order.ShippingCosts %></td>
-    <td><%=h order.customer_id %></td>
+    <td nowrap><%=h order.OrderDate %></td>
+    <td nowrap><%=h order.getStatusDesc %></td>
+    <td nowrap><%=h order.TotalPrice %></td>
+    <td nowrap><%=h order.PurchaseNumber %></td>
+    <td nowrap><%=h order.ShippingCosts %></td>
+    <td nowrap><%=h order.customer_id %></td>
     <td><%= link_to 'Show', order %></td>
     <td><%= link_to 'Edit', edit_order_path(order) %></td>
     <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
